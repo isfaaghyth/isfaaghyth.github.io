@@ -1,0 +1,3 @@
+User-agent: *
+
+sitemap: https://www.isfaa.js.org/sitemap.xml
