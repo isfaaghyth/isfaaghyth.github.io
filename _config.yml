@@ -1,8 +1,7 @@
 # Site settings
-title: Klise Theme # site title
+title: withisfa # site title
 description: >- # site description
-  He's writing in Bahasa about web technology and experience as a journal 
-  for documentation things that he learned, meet him <a href="https://github.com/piharpi" target="_blank" rel="noopener">@github</a>.
+  Situs ini berisi mikro frasa pemrograman seputar Kotlin, Android, Golang, dan Rust.
 lang: en-US # default lang
 timezone: Asia/Jakarta # set your timezone
 image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
@@ -11,16 +10,15 @@ mode: dark # default theme "dark" | "light"
 
 # Profile settings
 author:
-  name: Jekyll Klisé # author name
+  name: Muh Isfhani Ghiath # author name
   bio: >- # tell to the world
-    The minimalist Jekyll theme, light and dark mode support, for running a personal site and blog, 
-    meet Klisé theme at <a href="https://github.com/piharpi/jekyll-klise" target="_blank" rel="noopener">@github</a>.
-  username: username # general username
-  github: github_username # github username
-  twitter: twitter_username # twitter username
-  facebook: facebook_username # facebook username
-  email: your-email@email.com # email adress
-  avatar: /assets/img/avatar.jpg # change with your own avatar
+    Situs ini berisi mikro frasa pemrograman seputar Kotlin, Android, Golang, dan Rust. Temukan repositori saya di <a href="https://github.com/isfaaghyth" target="_blank" rel="noopener">@isfaaghyth</a>.
+  username: isfaaghyth # general username
+  github: isfaaghyth # github username
+  twitter: isfaaghyth # twitter username
+  facebook: isfaaghyth # facebook username
+  email: isfaaghyth@gmail.com # email adress
+  avatar: https://avatars.githubusercontent.com/u/6775159?v=4 # change with your own avatar
 
 # URL settings
 url: "https://klise.now.sh" #

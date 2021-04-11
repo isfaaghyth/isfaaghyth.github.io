@@ -7,7 +7,7 @@
   margin-right: auto;
   margin-left: auto;
   border-bottom: 1px solid $light;
-  padding: $spacing-full - 15px $spacing-full;
+  padding: $spacing-full - 10px $spacing-full;
   @extend %clearfix;
 }
 
@@ -114,6 +114,7 @@
     height: 50px;
     background-color: $white;
     border-bottom: 1px solid $light;
+    padding: 10px;
 
     a#mode {
       left: 10px;
@@ -181,9 +182,8 @@
 
 // Author
 .author {
-  margin-top: 6.3rem;
-  margin-bottom: 7.2rem;
-  text-align: center;
+  margin-top: 4.3rem;
+  margin-bottom: 3.2rem;
 
   @include media-query($on-mobile) {
     margin-bottom: 3em;
@@ -197,18 +197,13 @@
     background-color: $black;
     -ms-user-select: none;
     -webkit-user-select: none;
-    -webkit-animation: 0.5s ease-in forwards fadein;
-    animation: 0.5s ease-in forwards fadein;
-    opacity: 1;
   }
 
   .author-name {
-    font-size: 1.7em;
     margin-bottom: 2px;
   }
 
   .author-bio {
-    margin: 0 auto;
     opacity: 0.9;
     max-width: 393px;
     line-height: 1.688;
@@ -226,8 +221,9 @@
 // List of posts
 .post-item {
   display: flex;
-  padding-top: 5px;
-  padding-bottom: 6px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 11px;
   @extend %clearfix;
 
   &:not(:first-child) {
@@ -262,6 +258,11 @@
       }
     }
   }
+}
+
+.post-item:hover {
+  background-color: #acacac27;
+  border-radius: 6px;
 }
 
 // Footer
