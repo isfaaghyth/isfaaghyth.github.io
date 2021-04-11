@@ -1,18 +1,16 @@
 ---
-title: Colophon
+title: Isfa
 permalink: /about/
 layout: page
-excerpt: Hello peeps, I'm student of computer science from Banyuwangi, living in Jogjakarta. This blog for documentation about my programming journey, running on jekyll, hosting on netlify and using my own simple theme.
+excerpt: Halo, saya Isfa. Saat ini bekerja sebagai Sr Software Engineer Android di Tokopedia
 comments: false
 ---
 
-He's a student from Banyuwangi, living in Jogjakarta. the blog for documentation about his programming 🎒 journey, running on jekyll, hosting on [now.sh](http://now.sh) and using his own theme, he name it <a href="https://github.com/piharpi/jekyll-klise" target="_blank" rel="noopener">klisé</a>, he also loves to learning web technology; but he often forgot, that a reason why him doing the writing.
+Halo, saya Isfa. Saat ini bekerja sebagai <i>Sr Software Engineer Android</i> di <a href="https://tokopedia.com/">Tokopedia</a>.
 
-If you have a question about him or else, just send a letter to him.
+Kamu bisa [lapor](http://github.com/isfaaghyth/withisfa/issues/new) jika ada kekeliruan di <b>withisfa</b> ini.
 
-You can [report](http://github.com/piharpi/jekyll-klise/issues/new) if there is an broken link(s) or somethings else.
-
-**may u needs ✨**
+**Kontak aku di:**
 
 - {{ site.author.email }}
 - github.com/{{ site.author.github }}
