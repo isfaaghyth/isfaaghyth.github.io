@@ -62,10 +62,11 @@ class SparseIntArray {
     int size;
 }
 ```
-
+```bash
 Class = 12 + 3 * 4 = 24 bytes
 Array = 20 + 1000 * 4 = 4024 bytes
-Total = <b>8,072 bytes</b>
+Total = 8,072 bytes
+```
 
 ```kotlin
 class HashMap<K, V> {
@@ -79,10 +80,12 @@ class HashMap<K, V> {
     Collection<V> values;
 }
 ```
+```bash
 Class = 12 + 8 * 4 = 48 bytes
 Entry = 32 + 16 + 16 = 64 bytes
 Array = 20 + 1000 * 64 = 64024 bytes
-Total = <b>64,136 bytes</b>
+Total = 64,136 bytes
+```
 
 ##### 3. Penggunaan `null-checker` yang efektif
 
