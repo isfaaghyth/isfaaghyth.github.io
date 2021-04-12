@@ -1,0 +1,33 @@
+- title: Android DevTalks - Liberating Code with Kotlin
+  icon: /assets/img/kotlin.png
+  url: /assets/files/liberating_kotlin.pdf
+
+- title: Google DSC - Software Architecture Component
+  icon: /assets/img/android.png
+  url: https://docs.google.com/presentation/d/1Vgn4lZqQN5zkAlqKKtXLVcibolVItplT-S85xnBmW8k/edit?usp=sharing
+
+- title: Google I/O Extended - Jetpack Compose Introduction
+  icon: /assets/img/jetpack_compose.png
+  url: /assets/files/jetpack_compose.pdf
+
+- title: NgoprekBareng - Unit Testing on Android
+  icon: /assets/img/android.png
+  url: https://docs.google.com/presentation/d/1VLSNVklZXo5hAfsqL9BEINr-Ez__PpaUArSo2zF8pGg/edit?usp=sharing
+
+- title: 🧱 Android VIP - Android Modularization in a Nutshell
+  url: https://drive.google.com/file/d/1rkgaMq6wrZg7o4VDwj-4_P2e6ZjgdkON/view?usp=sharing
+
+- title: WeekendSharing - Use Visitable Pattern for Recyclerview on Android
+  icon: /assets/img/android.png
+  url: https://docs.google.com/presentation/d/1yeNwXZuxRLwoI46ZYFv-CZcQSkTOZaqzjwLZi0DfGBs/edit?usp=sharing
+
+- title: 🏄🏻‍♂️ Telkom Indonesia - Become Future Ready for Tech Industry
+  url: https://drive.google.com/file/d/1BGFLd5RClBKxMZ-tM4hd4kXmBl6CA4kx/view?usp=sharing
+
+- title: NgoprekBareng - Android Fundamental
+  icon: /assets/img/android.png
+  url: https://docs.google.com/presentation/d/1BFjz5LoElOul7LRlx3qIRIwieASMZ6GOpn65yq4MkTQ/edit?usp=sharing
+
+- title: GDG Depok - Introduction to Flutter
+  icon: /assets/img/flutter.png
+  url: https://drive.google.com/file/d/15zgskLOM9AKSj_Cg57L4nyVYw9-tQVro/view?usp=sharing

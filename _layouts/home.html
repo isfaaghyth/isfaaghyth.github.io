@@ -11,3 +11,27 @@ home: true
   </h4>
 </article>
 {%- endfor -%}
+
+<br>
+
+<h2 class="posts-item-note" aria-label="Recent Posts">Presentasi</h2>
+{%- for link in site.data.links -%}
+<article class="post-item">
+  <h4 class="post-item-title">
+    <a href="{{ link.url }}" target="_blank" rel="noopener"><img src="{{ link.icon }}" class="post-icon" /> {{
+      link.title }}</a>
+  </h4>
+</article>
+{%- endfor -%}
+
+<br>
+
+<h2 class="posts-item-note" aria-label="Recent Posts">Pers</h2>
+{%- for pers in site.data.pers -%}
+<article class="post-item">
+  <h4 class="post-item-title">
+    <a href="{{ pers.url }}" target="_blank" rel="noopener">{{ pers.title }}</a>
+    <br><b>{{ pers.subtitle }}</b>
+  </h4>
+</article>
+{%- endfor -%}

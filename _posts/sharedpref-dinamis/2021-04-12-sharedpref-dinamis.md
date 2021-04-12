@@ -38,3 +38,18 @@ internal class SharedPrefreencesManager {
 
 }
 ```
+
+cara penggunaan:
+```kotlin
+private val preferencesManager by lazy {
+    SharedPrefreencesManager(context)
+}
+
+private val key_uname = "username"
+
+preferencesManager.add(key_uname, "isfaaghyth")
+
+...
+
+println(preferencesManager.get(key_name))
+```
