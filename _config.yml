@@ -1,7 +1,7 @@
 # Site settings
 title: withisfa # site title
 description: >- # site description
-  Situs ini berisi mikro frasa pemrograman seputar Kotlin, Android, Golang, dan Rust.
+  Situs ini merupakan mikro frasa seputar utilitas pemrograman Android dan Backend.
 lang: en-US # default lang
 timezone: Asia/Jakarta # set your timezone
 image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
@@ -12,7 +12,7 @@ mode: dark # default theme "dark" | "light"
 author:
   name: Muh Isfhani Ghiath # author name
   bio: >- # tell to the world
-    Situs ini berisi mikro frasa pemrograman seputar Kotlin, Android, Golang, dan Rust. Temukan repositori saya di <a href="https://github.com/isfaaghyth" target="_blank" rel="noopener">@isfaaghyth</a>.
+    Situs ini merupakan mikro frasa seputar utilitas pemrograman Android dan Backend. Temukan repositori saya di <a href="https://github.com/isfaaghyth" target="_blank" rel="noopener">@isfaaghyth</a>.
   username: isfaaghyth # general username
   github: isfaaghyth # github username
   twitter: isfaaghyth # twitter username
