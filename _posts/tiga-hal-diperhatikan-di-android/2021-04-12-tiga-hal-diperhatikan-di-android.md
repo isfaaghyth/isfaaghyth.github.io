@@ -8,7 +8,7 @@ emoticon: 🔥
 
 ##### 1. Android Context
 
-Ada beberapa hal yang harus diperhatikan ketika mengolah object `context` pada android. 
+Ada beberapa hal yang harus diperhatikan ketika mengolah objek `context` pada android. 
 
 Pertama, jika membutuhkan sebuah objek `context`, pastikan jangan mengirim/menerima nya melalui _constructor_ class, karena ketika objek `context` hidup lebih lama _(keeping a long-lived reference)_, ia akan menyebabkan _memory leaks_. seperti:
 ```kotlin
