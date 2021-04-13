@@ -6,7 +6,9 @@ categories: android
 emoticon: ⛳️
 ---
 
-Hingga saat ini, sudah sangat jarang saya menggunakan Build/Compile yang _built-in_ dari Android Studio. Karena sehari-hari pekerjaanku sudah berorientasi modularisasi, maka penggunaan kurang tepat ketika menggunakan _Build Project_ yang disedikan oleh Android Studio. Sebagai gantinya, saya menggunakan `CLI` untuk mengeksekusi tugas yang dikerjakan oleh `gradle`.
+Hingga saat ini, sudah sangat jarang saya menggunakan _Build/Compile_ yang _built-in_ dari Android Studio. Karena sehari-hari pekerjaanku sudah berorientasi modularisasi, maka penggunaan _Build Project_ yang disedikan oleh Android Studio kurang tepat karena berdampak pada performa _device_ yang digunakan, salah satunya _build time_ yang cukup lama.
+
+Sebagai gantinya, saya menggunakan `CLI` untuk mengeksekusi tugas yang dikerjakan oleh `gradle`.
 
 Melakukan `build project`:
 ```bash
@@ -23,7 +25,7 @@ Melakukan `build project` dan dengan mengabaikan _task_ `linter`:
 $ ./gradlew assembleDebug -x lint
 ```
 
-Mengeksekusi `unit test`:
+Mengeksekusi `unit/instrument test`:
 ```bash
 $ ./gradlew test
 ```
@@ -33,10 +35,28 @@ Menginstalasi aplikasi ke _device/emulator_ yang aktif:
 $ ./gradlew installDebug
 ```
 
-Tips dari saya:
-```
+<hr>
+
+##### Tips dari saya:
+
 sebelum melakukan eksekusi perintah CLI tersebut, pastikan sudah melakukan kill-process terhadap task Java, dengan menggunakan perintah:
+```bash
 $ killall -9 java
+```
+
+<hr>
+
+Agar memudahkan untuk mengeksekusi perintah diatas, silahkan buat `CLI` alis di `bash_profile` seperti berikut:
+```bash
+alias killjava = "killall -9 java"
+alias assemble = "./gradlew assembleDebug"
+alias assembleOffline = "./gradlew assembleDebug --offline -x lint"
+alias installRun = "./gradlew assembleDebug --offline -x lint && adb shell am start -a android.intent.action.VIEW -d '$1'"
+```
+
+Untuk `installRun`, silahkan definisikan _target applink_ melalui parameter:
+```bash
+$ installRun "app://isfaaghyth/home"
 ```
 
 
