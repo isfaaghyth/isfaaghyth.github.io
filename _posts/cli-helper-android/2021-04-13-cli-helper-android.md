@@ -20,7 +20,7 @@ Melakukan `build project` dan dengan memanfaatkan `offline mode`:
 $ ./gradlew assembleDebug --offline
 ```
 
-Melakukan `build project` dan dengan mengabaikan _task_ `linter`:
+Melakukan `build project` dan dengan mengabaikan `linter` _task checker_:
 ```bash
 $ ./gradlew assembleDebug -x lint
 ```
@@ -39,14 +39,14 @@ $ ./gradlew installDebug
 
 ##### Tips dari saya:
 
-sebelum melakukan eksekusi perintah CLI tersebut, pastikan sudah melakukan kill-process terhadap task Java, dengan menggunakan perintah:
+sebelum melakukan eksekusi perintah `CLI` tersebut, pastikan sudah melakukan <b>kill-process</b> terhadap task Java, dengan menggunakan perintah:
 ```bash
 $ killall -9 java
 ```
 
 <hr>
 
-Agar memudahkan untuk mengeksekusi perintah diatas, silahkan buat `CLI` alis di `bash_profile` seperti berikut:
+Agar memudahkan untuk mengeksekusi perintah diatas, silahkan buat alias di `bash_profile` seperti berikut:
 ```bash
 alias killjava = "killall -9 java"
 alias assemble = "./gradlew assembleDebug"
@@ -54,7 +54,7 @@ alias assembleOffline = "./gradlew assembleDebug --offline -x lint"
 alias installRun = "./gradlew assembleDebug --offline -x lint && adb shell am start -a android.intent.action.VIEW -d '$1'"
 ```
 
-Untuk `installRun`, silahkan definisikan _target applink_ melalui parameter:
+Untuk `installRun`, silahkan tentukan _target applink_ melalui parameter:
 ```bash
 $ installRun "app://isfaaghyth/home"
 ```
@@ -63,7 +63,6 @@ $ installRun "app://isfaaghyth/home"
 Beberapa manfaat menggunakan `CLI` (_build_ manual melalui terminal), antara lain:
 - _Build time_ jauh lebih cepat (menghemat waktu)
 - Dapat memaksimalkan jumlah _thread_ yang ada
-- Dapat melakukan _build module_ secara spesifik
-- _Exponential cache_, maksudnya, setiap menggunakan perintah `CLI`, maka modul yang sudah di _build_, akan ambil dari _cache_ yang sudah terjadi sebelumnya
+- Dapat melakukan _build module_ atau memilih _env flavors_ secara spesifik
 
 Sekian!
