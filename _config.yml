@@ -7,6 +7,7 @@ timezone: Asia/Jakarta # set your timezone
 image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
 repo: https://github.com/isfaaghyth/withisfa # site repo [optional]
 mode: dark # default theme "dark" | "light"
+google_analytics: G-GRCLZ4E0FX
 
 # Profile settings
 author:
