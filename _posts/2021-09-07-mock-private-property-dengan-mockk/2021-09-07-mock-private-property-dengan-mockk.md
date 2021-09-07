@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Mock Private Property dengan Mockk"
+title: "Mock Private Property dengan MockK"
 date: 2021-09-07" "21:51:34
 categories: android
 emoticon: 🧟
