@@ -16,7 +16,7 @@ https://github.com/mockk/mockk/issues/104
 
 Lalu, bagaimana agar dapat melakukan _mocking_ terhadap _private property_? Kita dapat melakukan secara sederhana, dengan menggunakan _class reflection_ seperti berikut:
 
-```kt
+```kotlin
 data class MockProperty(var propertyName: String, var value: Any)
 
 private infix fun Any.mockProperty(property: MockProperty): Any {
@@ -31,7 +31,7 @@ private infix fun Any.mockProperty(property: MockProperty): Any {
 
 Cara menggunakannya pun cukup mudah:
 
-```kt
+```kotlin
 class Foo {
     private var isSuccess = false
 
