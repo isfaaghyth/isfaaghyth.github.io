@@ -10,7 +10,7 @@ emoticon: 🧟
 
 *MockK* merupakan salah satu _library_ yang dapat kita gunakan untuk _testing_ pada Android. Banyak `API` yang telah disedikan yang memudahkan kita untuk melakukan testing, _mocking private method_ misalnya. Seperti yang kita ketahui, *mockK* memiliki _infix extension_ `getProperty()` yang dapat kita gunakan untuk _mocking_ terhadap `private function` yang ada pada class. Tapi, `getProperty()` tersebut belum mendukung untuk sebuah _private property_. Alasannya, karena sebuah _property_ yang _private_ tidak memiliki `getter/setter`. 
 
-https://github.com/mockk/mockk/issues/104
+[MockK #104 issue](https://github.com/mockk/mockk/issues/104)
 
 ### Solution
 
