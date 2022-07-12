@@ -6,38 +6,31 @@ excerpt: Selamat datang di withisfa, jurnal mikro frasa seputar pemrograman Andr
 comments: false
 ---
 
-Halo, saya Isfa. Saat ini bekerja sebagai _Sr Software Engineer Android_ di [Tokopedia](https://tokopedia.com/). Saya memiliki pengalaman di _Software Development_ sejak 2009, aktif berkomunitas sejak 2012, dan _professional career_ sejak 2014. Saya gemar mempublikasi `open source project` di [github@isfaaghyth](http://github.com/isfaaghyth) dan senang bercengkrama bersama untuk mencari solusi dari masalah kode yang ditemui.
+Isfa is a Software Engineer with 12 years of experience in different languages and platforms. Currently working as Senior Software Engineer Android at Tokopedia, one of the leading e-commerce companies in Indonesia. Part of User and Media Platform, Isfa focuses on Push Notification service, Media Picker & Uploader, and In-house Broadcaster SDK on Tokopedia Play.
 
-Situs ini merupakan mikro frasa seputar utilitas pemrograman Android dan Backend, serta mendokumentasikan hal-hal menarik yang saya temui sehari-hari. Tidak berbentuk `tutorial` yang komprehensif, dan hanya mempublikasi seutas kode yang <s>mungkin</s> bermanfaat.
+Prior to Tokopedia, Isfa founded a software house company in 2013, focusing to deliver a consumer product with mobile and web development services. Apart from that, Isfa is also active in several communities, such as GDG Jakarta as Co-Organizer, Google DSC as Former Lead, AEJ (Android Enthusiast Jakarta) as Core team, and part of members of Android VIP Indonesia.
 
-Kamu bisa mengirimkan [umpan balik](http://github.com/isfaaghyth/withisfa/issues/new) jika ada kekeliruan di <b>withisfa</b> atau dengan [berdiskusi](https://github.com/isfaaghyth/withisfa/discussions) dengan saya jika ada topik menarik yang bisa kita bahas bersama.
+Isfa majored and received summa cum-laude (3.99 GPA) in Informatics at STT Nurul Fikri. Isfa’s free time is spent contributing to open-source projects on Github and tinkering the mobile app development and AI with NLP in Bahasa.
 
-**saya tergabung di**
-- GDG Jakarta
-- Google DSC
-- Android VIP
-- ADB
-- AEJ Jakarta
-- CodeAndroid
+Please send me a [umpan balik](http://github.com/isfaaghyth/withisfa/issues/new) if you have any suggestion and feedback for me. Also, let's [berdiskusi](https://github.com/isfaaghyth/withisfa/discussions) with me if you have any question related Android and Backend programming.
 
-**yang saya gunakan**
-- Macbook PRO 2018, Lenovo X1 Carbon
+**My Equipments**
+- M1 Mbp 2021, Lenovo X1 Carbon
 - LG LED 25" IPS 25UM58
-- Android Studio, IntelliJ, PyCharm
-- VSCode
-- zsh
 
-**jika kamu ingin mengirimkan pesan enkripsi kepada saya**
+**additional details**
 
 fingerprint:
 ```
 16C81F895E7C27A31E3C8A8B28BECCF4B03B0C67
 ```
 
-Kunci GPG: 
+GPG keys: 
 [dengan fingerprint diatas](https://keybase.io/isfaaghyth/pgp_keys.asc?fingerprint=16c81f895e7c27a31e3c8a8b28beccf4b03b0c67)
 
-atau dengan:
+or with:
 ```
 $ keybase id isfaaghyth
 ```
+
+Thanks! 🌴
