@@ -18,7 +18,8 @@ Please send me a [umpan balik](http://github.com/isfaaghyth/withisfa/issues/new)
 - M1 Mbp 2021, Lenovo X1 Carbon
 - LG LED 25" IPS 25UM58
 
-**additional details**
+
+**Additional Details**
 
 fingerprint:
 ```
