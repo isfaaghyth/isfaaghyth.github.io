@@ -189,13 +189,14 @@
   }
 
   .author-avatar {
-    width: 70px;
-    height: 70px;
-    border-radius: 100%;
+    width: 90px;
+    height: 90px;
+    border-radius: 20%;
     user-select: none;
     background-color: $black;
     -ms-user-select: none;
     -webkit-user-select: none;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.15));
   }
 
   .author-name {

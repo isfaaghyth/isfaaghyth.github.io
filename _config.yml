@@ -1,19 +1,18 @@
 # Site settings
-title: withisfa # site title
-description: >- # site description
-  Situs ini merupakan mikro frasa seputar utilitas pemrograman Android dan Backend.
+title: isfa.dev # site title
+description: Software Engineer  # site description
 lang: en-US # default lang
 timezone: Asia/Jakarta # set your timezone
 image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
 repo: https://github.com/isfaaghyth/withisfa # site repo [optional]
 mode: dark # default theme "dark" | "light"
-google_analytics: G-GRCLZ4E0FX
+google_analytics: G-XP2EHVCFFT
 
 # Profile settings
 author:
-  name: Muh Isfhani Ghiath # author name
+  name: Muh Isfhani Ghiath 👋🏼 # author name
   bio: >- # tell to the world
-    Situs ini merupakan mikro frasa seputar utilitas pemrograman Android dan Backend. Temukan repositori saya di <a href="https://github.com/isfaaghyth" target="_blank" rel="noopener">@isfaaghyth</a>.
+    Full-stack engineer dengan pengalaman 10+ tahun. Sekarang lagi passionate sama multiplatform mobile app - mulai dari KMP, Lynx, Compose, sampai eksplorasi app performance dan test. Temukan repositori saya di <a href="https://github.com/isfaaghyth" target="_blank" rel="noopener">@isfaaghyth</a>.
   username: isfaaghyth # general username
   github: isfaaghyth # github username
   twitter: isfaaghyth # twitter username
@@ -22,10 +21,10 @@ author:
   avatar: https://avatars.githubusercontent.com/u/6775159?v=4 # change with your own avatar
 
 # URL settings
-url: "https://with.isfa.xyz/" #
+url: "https://isfa.dev/" #
 baseurl:
 permalink: /:title/
-google_analytics: # leave it blank if not wish
+google_analytics: G-XP2EHVCFFT # leave it blank if not wish
 fb_appid:
 
 # Collection setting

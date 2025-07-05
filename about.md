@@ -1,37 +1,43 @@
 ---
-title: Isfa 
+title: Muh Isfhani Ghiath
 permalink: /about/
 layout: page
 excerpt: Selamat datang di withisfa, jurnal mikro frasa seputar pemrograman Android dan Backend.
 comments: false
 ---
 
-Isfa is a Software Engineer with 12 years of experience in different languages and platforms. Currently working as Senior Software Engineer Android at Tokopedia, one of the leading e-commerce companies in Indonesia. Part of User and Media Platform, Isfa focuses on Push Notification service, Media Picker & Uploader, and In-house Broadcaster SDK on Tokopedia Play.
+TODO socmed
 
-Prior to Tokopedia, Isfa founded a software house company in 2013, focusing to deliver a consumer product with mobile and web development services. Apart from that, Isfa is also active in several communities, such as GDG Jakarta as Co-Organizer, Google DSC as Former Lead, AEJ (Android Enthusiast Jakarta) as Core team, and part of members of Android VIP Indonesia.
+Bismillah, halo! 👋🏼
 
-Isfa majored and received summa cum-laude (3.99 GPA) in Informatics at STT Nurul Fikri. Isfa’s free time is spent contributing to open-source projects on Github and tinkering the mobile app development and AI with NLP in Bahasa.
+Perkenalkan, **isfa**, saya seorang GDE Android dan Full-stack engineer dengan pengalaman 10+ tahun. Sekarang lagi passionate sama multiplatform mobile app - mulai dari KMP, Lynx, Compose, sampai eksplorasi app performance dan test.
 
-Please send me a [umpan balik](http://github.com/isfaaghyth/withisfa/issues/new) if you have any suggestion and feedback for me. Also, let's [berdiskusi](https://github.com/isfaaghyth/withisfa/discussions) with me if you have any question related Android and Backend programming.
+Perhari ini, saya bekerja sebagai Software Engineer di ByteDance untuk produk Tokopedia, salah satu e-commerce platform di Indonesia. Saat ini, saya memimpin untuk bagian teknikal untuk Browse Team, atau halaman utama dari aplikasi Tokopedia Consumer App. Selain halaman utama, meliputi juga, Navigation module, dan Recommendation Engine untuk Android dan iOS. 
 
-**My Equipments**
+Selain Tokopedia, saya juga membantu untuk membangun [dailyfriend.ai](https://dailyfriend.ai/), sebuah AI-companion app untuk kamu yang ingin teman ngobrol 24/7. Dan juga saya dan [tim saya](https://kepul.id/team) membangun usaha jual-beli Sampah, [kepul.id](https://kepul.id/) yang berlokasi di Medan dan Gading Serpong, kamu bisa menjual barang bekas daur ulang di [kepul](https://kepul.id/) dengan harga yang kompetitif.
+
+Sebelumnya, saya memimpin selama 8 tahun untuk komunitas Google, [GDG Jakarta](https://gdg.community.dev/gdg-jakarta) sebagai co-lead, komunitas untuk kamu yang ingin belajar seputar teknologi Google seperti Android, Firebase, Google Cloud dan lainnya.
+
+Saya lulus tahun 2019 dengan summa cum-laude (3.99 GPA) di [STT Terpadu Nurul Fikri](https://nurulfikri.ac.id/) dengan peminatan Teknik Informatika. Semasa mahasiswa, saya pernah jadi [DSC Lead](https://developers.googleblog.com/id/calling-all-students-learn-how-to-become-a-google-developer-student-club-lead/) untuk kampus saya selama 2 tahun, dan berkat kontribusi di DSC, saya mendapatkan kesempatan untuk ikut [Google I/O](https://io.google/) di Mountain View, California.
+
+**Perangkat**
 - M1 Mbp 2021, Lenovo X1 Carbon
 - LG LED 25" IPS 25UM58
 
 
-**Additional Details**
+**Lainnya**
 
 fingerprint:
 ```
 16C81F895E7C27A31E3C8A8B28BECCF4B03B0C67
 ```
 
-GPG keys: 
+Kunci GPG: 
 [dengan fingerprint diatas](https://keybase.io/isfaaghyth/pgp_keys.asc?fingerprint=16c81f895e7c27a31e3c8a8b28beccf4b03b0c67)
 
-or with:
+atau dengan:
 ```
 $ keybase id isfaaghyth
 ```
 
-Thanks! 🌴
+Terima kasih, wassalam! 🌴

@@ -3,14 +3,15 @@ layout: default
 home: true
 ---
 
-<!-- <h2 class="posts-item-note" aria-label="Recent Posts">Artikel terkini</h2> -->
-<!-- {%- for post in site.posts limit: site.number_of_posts -%} -->
-<!-- <article class="post-item">
+<h2 class="posts-item-note" aria-label="Recent Posts">Pers</h2>
+{%- for pers in site.data.pers -%}
+<article class="post-item">
   <h4 class="post-item-title">
-    <a href="{{ post.url }}">{{ post.emoticon }} {{ post.title | escape }}</a>
+    <a href="{{ pers.url }}" target="_blank" rel="noopener">{{ pers.title }}</a>
+    <br><b>{{ pers.subtitle }}</b>
   </h4>
-</article> -->
-<!-- {%- endfor -%} -->
+</article>
+{%- endfor -%}
 
 <br>
 
@@ -25,13 +26,3 @@ home: true
 {%- endfor -%}
 
 <br>
-
-<h2 class="posts-item-note" aria-label="Recent Posts">Pers</h2>
-{%- for pers in site.data.pers -%}
-<article class="post-item">
-  <h4 class="post-item-title">
-    <a href="{{ pers.url }}" target="_blank" rel="noopener">{{ pers.title }}</a>
-    <br><b>{{ pers.subtitle }}</b>
-  </h4>
-</article>
-{%- endfor -%}
