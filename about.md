@@ -6,7 +6,14 @@ excerpt: Selamat datang di withisfa, jurnal mikro frasa seputar pemrograman Andr
 comments: false
 ---
 
-TODO socmed
+<div class="social-links">
+  {% if site.author.github %}
+  <a href="https://github.com/{{ site.author.github }}" class="social-link" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+  {% endif %}
+  {% if site.author.twitter %}
+  <a href="https://twitter.com/{{ site.author.twitter }}" class="social-link" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+  {% endif %}
+</div>
 
 Bismillah, halo! 👋🏼
 

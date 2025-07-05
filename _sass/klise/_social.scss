@@ -1,0 +1,25 @@
+.social-links {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.social-link {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  background-color: #eee;
+  text-align: center;
+  margin: 0 5px;
+  transition: background-color 0.3s;
+}
+
+.social-link:hover {
+  background-color: #ddd;
+}
+
+.social-link i {
+  font-size: 20px;
+  color: #333;
+}

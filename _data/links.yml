@@ -1,7 +1,9 @@
 - title: Build multi-device and multi-screen app with KMP and Compose Multiplatform
+  icon: https://images.ctfassets.net/23aumh6u8s0i/4JQe27JmEip0X21uRGa0sr/ae23bfa547ed18a019c6fd92615f1eff/jetpack_compose_icon.png
   url: https://s.id/1XEce
 
 - title: JuaraAndroid - Navigation and app architecture introduction
+  icon: /assets/img/android.png
   url: https://docs.google.com/presentation/d/1kN3OBse4Ul7V3T6Qme9beif2TtQKUmAGSm8SdQDokCI/edit?usp=sharing
 
 - title: 🧩 Mobius Framework - A State Management for Multiplatform
