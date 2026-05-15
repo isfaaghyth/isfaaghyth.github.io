@@ -1,21 +1,6 @@
-import { AuthorizationCode } from "simple-oauth2"
-
-const OAUTH_CLIENT_ID = process.env.OAUTH_CLIENT_ID
-const OAUTH_CLIENT_SECRET = process.env.OAUTH_CLIENT_SECRET
+const CLIENT_ID = process.env.OAUTH_CLIENT_ID
+const CLIENT_SECRET = process.env.OAUTH_CLIENT_SECRET
 const ORIGIN = process.env.ORIGIN || "https://isfa.dev"
-const SITE_URL = process.env.SITE_URL
-
-const client = new AuthorizationCode({
-  client: {
-    id: OAUTH_CLIENT_ID,
-    secret: OAUTH_CLIENT_SECRET,
-  },
-  auth: {
-    tokenHost: "https://github.com",
-    tokenPath: "/login/oauth/access_token",
-    authorizePath: "/login/oauth/authorize",
-  },
-})
 
 export default async function handler(event) {
   const path = event.path.replace(/\/\.netlify\/functions\/[^/]+/, "")
@@ -29,18 +14,19 @@ export default async function handler(event) {
 
 async function handleAuth(event) {
   const params = event.queryStringParameters || {}
-  const provider = params.provider || "github"
-  const siteUrl = params.site_id || SITE_URL || ORIGIN
+  const siteUrl = params.site_id || ORIGIN
+  const scope = params.scope || "repo,user"
+  const redirectUri = event.rawUrl.replace(/\/auth(\?.*)?$/, "/callback")
 
-  const url = client.authorizeURL({
-    redirect_uri: `${process.env.URL}/callback`,
-    scope: "repo,user",
-    state: siteUrl,
-  })
+  const authUrl = new URL("https://github.com/login/oauth/authorize")
+  authUrl.searchParams.set("client_id", CLIENT_ID)
+  authUrl.searchParams.set("redirect_uri", redirectUri)
+  authUrl.searchParams.set("scope", scope)
+  authUrl.searchParams.set("state", siteUrl)
 
   return {
     statusCode: 302,
-    headers: { Location: url },
+    headers: { Location: authUrl.toString() },
   }
 }
 
@@ -53,17 +39,33 @@ async function handleCallback(event) {
   }
 
   try {
-    const token = await client.getToken({
-      code,
-      redirect_uri: `${process.env.URL}/callback`,
+    const redirectUri = event.rawUrl.replace(/\/callback(\?.*)?$/, "/callback")
+
+    const response = await fetch("https://github.com/login/oauth/access_token", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        client_id: CLIENT_ID,
+        client_secret: CLIENT_SECRET,
+        code,
+        redirect_uri: redirectUri,
+      }),
     })
 
+    const data = await response.json()
+
+    if (data.error) {
+      return { statusCode: 400, body: JSON.stringify(data) }
+    }
+
     const origin = state || ORIGIN
-    const content = renderPage(token.token.access_token, origin)
     return {
       statusCode: 200,
       headers: { "Content-Type": "text/html" },
-      body: content,
+      body: renderPage(data.access_token, origin),
     }
   } catch (err) {
     return {
@@ -74,7 +76,7 @@ async function handleCallback(event) {
 }
 
 function renderPage(token, origin) {
-  return `<!DOCTYPE html>
+  return `<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
