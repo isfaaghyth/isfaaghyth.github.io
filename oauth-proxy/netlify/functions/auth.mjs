@@ -2,9 +2,15 @@ const CLIENT_ID = process.env.OAUTH_CLIENT_ID
 const CLIENT_SECRET = process.env.OAUTH_CLIENT_SECRET
 const ORIGIN = process.env.ORIGIN || "https://isfa.dev"
 
+function getBaseUrl(event) {
+  const host = event.headers?.host || process.env.URL?.replace(/^https?:\/\//, "")
+  const proto = event.headers?.["x-forwarded-proto"] || "https"
+  return `${proto}://${host}`
+}
+
 export default async function handler(event) {
-  const path = event.path.replace(/\/\.netlify\/functions\/[^/]+/, "")
-  const [section] = path.split("/").filter(Boolean)
+  const path = event.rawPath || event.path || ""
+  const [section] = path.replace(/\/\.netlify\/functions\/[^/]+/, "").split("/").filter(Boolean)
 
   if (section === "callback") {
     return handleCallback(event)
@@ -16,7 +22,7 @@ async function handleAuth(event) {
   const params = event.queryStringParameters || {}
   const siteUrl = params.site_id || ORIGIN
   const scope = params.scope || "repo,user"
-  const redirectUri = event.rawUrl.replace(/\/auth(\?.*)?$/, "/callback")
+  const redirectUri = `${getBaseUrl(event)}/callback`
 
   const authUrl = new URL("https://github.com/login/oauth/authorize")
   authUrl.searchParams.set("client_id", CLIENT_ID)
@@ -24,10 +30,7 @@ async function handleAuth(event) {
   authUrl.searchParams.set("scope", scope)
   authUrl.searchParams.set("state", siteUrl)
 
-  return {
-    statusCode: 302,
-    headers: { Location: authUrl.toString() },
-  }
+  return Response.redirect(authUrl.toString(), 302)
 }
 
 async function handleCallback(event) {
@@ -35,11 +38,11 @@ async function handleCallback(event) {
   const { code, state } = params
 
   if (!code) {
-    return { statusCode: 400, body: "Missing authorization code" }
+    return new Response("Missing authorization code", { status: 400 })
   }
 
   try {
-    const redirectUri = event.rawUrl.replace(/\/callback(\?.*)?$/, "/callback")
+    const redirectUri = `${getBaseUrl(event)}/callback`
 
     const response = await fetch("https://github.com/login/oauth/access_token", {
       method: "POST",
@@ -58,20 +61,19 @@ async function handleCallback(event) {
     const data = await response.json()
 
     if (data.error) {
-      return { statusCode: 400, body: JSON.stringify(data) }
+      return new Response(JSON.stringify(data), { status: 400, headers: { "Content-Type": "application/json" } })
     }
 
     const origin = state || ORIGIN
-    return {
-      statusCode: 200,
+    return new Response(renderPage(data.access_token, origin), {
+      status: 200,
       headers: { "Content-Type": "text/html" },
-      body: renderPage(data.access_token, origin),
-    }
+    })
   } catch (err) {
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ error: err.message }),
-    }
+    return new Response(
+      JSON.stringify({ error: err.message }),
+      { status: 500, headers: { "Content-Type": "application/json" } }
+    )
   }
 }
 
