@@ -82,7 +82,7 @@ async function handleCallback(event) {
 
 function renderPage(token, origin) {
   const originClean = origin.replace(/\/$/, "")
-  const data = JSON.stringify({ token, provider: "github" })
+  const tokenData = JSON.stringify({ token })
   return `<!doctype html>
 <html>
   <head>
@@ -91,21 +91,40 @@ function renderPage(token, origin) {
   </head>
   <body>
     <script>
-      var data = ${data};
       var origin = "${originClean}";
-      try {
-        if (window.opener) {
-          window.opener.postMessage(data, origin);
+      var tokenData = ${tokenData};
+      var handshakeDone = false;
+
+      function sendAuth() {
+        try {
+          window.opener.postMessage("authorization:github:success:" + JSON.stringify(tokenData), origin);
+        } catch (e) {}
+        try {
+          window.opener.postMessage(tokenData, origin);
+        } catch (e) {}
+        if (!handshakeDone) {
+          handshakeDone = true;
+          setTimeout(function() { try { window.close(); } catch (e) {} }, 500);
         }
-      } catch (e) {}
-      if (window.opener && !window.opener.closed) {
-        setTimeout(function() {
-          try { window.opener.postMessage(data, origin); } catch (e) {}
-          try { window.close(); } catch (e) {}
-        }, 500);
-      } else {
-        window.location.href = origin + "/admin/#access_token=" + encodeURIComponent(data.token) + "&provider=github";
       }
+
+      function startHandshake() {
+        try {
+          window.opener.postMessage("authorizing:github", origin);
+        } catch (e) {}
+        setTimeout(function() {
+          if (!handshakeDone) sendAuth();
+        }, 1000);
+      }
+
+      window.addEventListener("message", function(e) {
+        if (e.origin !== origin && e.origin !== "https://" + new URL(origin).host) return;
+        if (e.data === "authorizing:github") {
+          sendAuth();
+        }
+      });
+
+      startHandshake();
     </script>
     <p>Authorization successful. <a href="${originClean}/admin/#access_token=${encodeURIComponent(token)}&provider=github">Click here if you are not redirected.</a></p>
   </body>
