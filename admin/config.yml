@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: isfaaghyth/isfaaghyth.github.io
   branch: main
 
 media_folder: "assets/images/uploads"

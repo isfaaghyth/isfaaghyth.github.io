@@ -71,6 +71,7 @@ include:
 
 exclude:
   - CNAME
+  - oauth-proxy
   - Gemfile
   - Gemfile.lock
   - LICENSE
