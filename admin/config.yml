@@ -3,6 +3,7 @@ backend:
   repo: isfaaghyth/isfaaghyth.github.io
   branch: main
   base_url: https://decap-proxy.netlify.app
+  auth_endpoint: auth
 
 media_folder: "assets/images/uploads"
 public_folder: "/assets/images/uploads"
