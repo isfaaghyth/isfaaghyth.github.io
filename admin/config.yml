@@ -1,9 +1,6 @@
 backend:
-  name: github
-  repo: isfaaghyth/isfaaghyth.github.io
+  name: git-gateway
   branch: main
-  base_url: https://decap-proxy.netlify.app
-  auth_endpoint: auth
 
 media_folder: "assets/images/uploads"
 public_folder: "/assets/images/uploads"
