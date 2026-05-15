@@ -1,12 +1,12 @@
-- title: beranda
+- title: home
   url: /
   external: false
 
-- title: arsip
-  url: /archive/
+- title: blog
+  url: /blog/
   external: false
 
-- title: tentang
+- title: about
   url: /about/
   external: false # set true if you using external link, see below
 

@@ -2,49 +2,50 @@
 title: Muh Isfhani Ghiath
 permalink: /about/
 layout: page
-excerpt: Selamat datang di withisfa, jurnal mikro frasa seputar pemrograman Android dan Backend.
+excerpt: Welcome to withisfa, a micro-journal about Android programming and Backend engineering.
 comments: false
 ---
 
-<div class="social-links">
+<div class="social-links-text">
   {% if site.author.github %}
-  <a href="https://github.com/{{ site.author.github }}" class="social-link" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+  <a href="https://github.com/{{ site.author.github }}" rel="noopener noreferrer">GitHub</a>
   {% endif %}
+  {% if site.author.github and site.author.twitter %} / {% endif %}
   {% if site.author.twitter %}
-  <a href="https://twitter.com/{{ site.author.twitter }}" class="social-link" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+  <a href="https://twitter.com/{{ site.author.twitter }}" rel="noopener noreferrer">Twitter</a>
   {% endif %}
 </div>
 
-Bismillah, halo! 👋🏼
+Hey there! 👋🏼
 
-Perkenalkan, **isfa**, saya seorang GDE Android dan Full-stack engineer dengan pengalaman 10+ tahun. Sekarang lagi passionate sama multiplatform mobile app - mulai dari KMP, Lynx, Compose, sampai eksplorasi app performance dan test.
+I'm **Isfa** — an Android GDE and full-stack engineer with 10+ years of experience. These days I'm really into multiplatform mobile apps — everything from KMP and Lynx to Compose, plus digging into app performance and testing.
 
-Perhari ini, saya bekerja sebagai Software Engineer di ByteDance untuk produk Tokopedia, salah satu e-commerce platform di Indonesia. Saat ini, saya memimpin untuk bagian teknikal untuk Browse Team, atau halaman utama dari aplikasi Tokopedia Consumer App. Selain halaman utama, meliputi juga, Navigation module, dan Recommendation Engine untuk Android dan iOS. 
+Right now, I'm a Software Engineer at ByteDance working on the Tokopedia product, one of Indonesia's biggest e-commerce platforms. I lead the technical side of the Browse Team, which covers the home page of the Tokopedia Consumer App, plus the Navigation module and Recommendation Engine for both Android and iOS.
 
-Selain Tokopedia, saya juga membantu untuk membangun [dailyfriend.ai](https://dailyfriend.ai/), sebuah AI-companion app untuk kamu yang ingin teman ngobrol 24/7. Dan juga saya dan [tim saya](https://kepul.id/team) membangun usaha jual-beli Sampah, [kepul.id](https://kepul.id/) yang berlokasi di Medan dan Gading Serpong, kamu bisa menjual barang bekas daur ulang di [kepul](https://kepul.id/) dengan harga yang kompetitif.
+Besides Tokopedia, I'm also helping build [dailyfriend.ai](https://dailyfriend.ai/), an AI-companion app for anyone who wants a friend to chat with 24/7. And together with [my team](https://kepul.id/team), I run [kepul.id](https://kepul.id/) — a waste-trading business in Medan and Gading Serpong where you can sell recyclable goods at competitive prices.
 
-Sebelumnya, saya memimpin selama 8 tahun untuk komunitas Google, [GDG Jakarta](https://gdg.community.dev/gdg-jakarta) sebagai co-lead, komunitas untuk kamu yang ingin belajar seputar teknologi Google seperti Android, Firebase, Google Cloud dan lainnya.
+Previously, I co-led [GDG Jakarta](https://gdg.community.dev/gdg-jakarta) — a Google developer community — for 8 years, helping folks learn about Android, Firebase, Google Cloud, and more.
 
-Saya lulus tahun 2019 dengan summa cum-laude (3.99 GPA) di [STT Terpadu Nurul Fikri](https://nurulfikri.ac.id/) dengan peminatan Teknik Informatika. Semasa mahasiswa, saya pernah jadi [DSC Lead](https://developers.googleblog.com/id/calling-all-students-learn-how-to-become-a-google-developer-student-club-lead/) untuk kampus saya selama 2 tahun, dan berkat kontribusi di DSC, saya mendapatkan kesempatan untuk ikut [Google I/O](https://io.google/) di Mountain View, California.
+I graduated summa cum-laude (3.99 GPA) in 2019 from [STT Terpadu Nurul Fikri](https://nurulfikri.ac.id/) with a major in Informatics Engineering. During college, I was a [DSC Lead](https://developers.googleblog.com/id/calling-all-students-learn-how-to-become-a-google-developer-student-club-lead/) for 2 years, and thanks to that contribution, I got the chance to attend [Google I/O](https://io.google/) in Mountain View, California.
 
-**Perangkat**
-- M1 Mbp 2021, Lenovo X1 Carbon
+**Gear**
+- M1 MacBook Pro 2021, Lenovo X1 Carbon
 - LG LED 25" IPS 25UM58
 
 
-**Lainnya**
+**Misc**
 
 fingerprint:
 ```
 16C81F895E7C27A31E3C8A8B28BECCF4B03B0C67
 ```
 
-Kunci GPG: 
-[dengan fingerprint diatas](https://keybase.io/isfaaghyth/pgp_keys.asc?fingerprint=16c81f895e7c27a31e3c8a8b28beccf4b03b0c67)
+GPG Key:
+[with the fingerprint above](https://keybase.io/isfaaghyth/pgp_keys.asc?fingerprint=16c81f895e7c27a31e3c8a8b28beccf4b03b0c67)
 
-atau dengan:
+or via:
 ```
 $ keybase id isfaaghyth
 ```
 
-Terima kasih, wassalam! 🌴
+Thanks for stopping by! 🌴

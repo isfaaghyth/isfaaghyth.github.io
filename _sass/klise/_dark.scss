@@ -97,7 +97,7 @@ body[data-theme="dark"] {
     }
 
     &:focus {
-      outline-color: #464646;
+      outline-color: rgba(110, 198, 216, 0.4);
     }
   }
 
@@ -111,7 +111,7 @@ body[data-theme="dark"] {
   // Blockquote
   blockquote {
     color: $dark-gray;
-    border-color: $dark-light;
+    border-left-color: $dark-text-link-blue;
   }
 
   // Strong, Bold
@@ -122,7 +122,9 @@ body[data-theme="dark"] {
 
   // Navbar
   .navbar {
-    border-color: $dark-light;
+    background-color: rgba(15, 17, 23, 0.85);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
+
     .menu {
       a#mode {
         .mode-sunny {
@@ -174,8 +176,37 @@ body[data-theme="dark"] {
     }
   }
 
+  .post-item:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+  }
+
+  // Author name
+  .author-name {
+    color: $dark-white;
+  }
+
+  // Card items
+  .card-item {
+    border-color: $dark-light;
+    background-color: rgba(255, 255, 255, 0.03);
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .post-item-title {
+      font-size: $small-font-size;
+    }
+  }
+
+  // Site domain
+  a#mode + .site-domain,
+  .menu .site-domain {
+    color: $dark-white;
+  }
+
   .author-avatar {
-    filter: drop-shadow(0 2px 6px rgba(255,255,255,0.1));
+    filter: drop-shadow(0 2px 8px rgba(255, 255, 255, 0.08));
   }
 
   // Post Navigation
@@ -238,14 +269,39 @@ body[data-theme="dark"] {
     .solution:hover {
       color: $dark-text-link-blue-active;
     }
-  }  
+  }
 
   .search-article {
     input[type="search"] {
       color: $dark-text-base-color;
       &::-webkit-input-placeholder {
-        color: rgba(128,128,128,0.8);
+        color: rgba(128, 128, 128, 0.8);
       }
+    }
+  }
+
+  // Back to top
+  #back-to-top {
+    background-color: $dark-text-link-blue;
+    color: $dark-black;
+
+    &:hover {
+      background-color: $dark-text-link-blue-active;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px rgba(110, 198, 216, 0.35);
+    }
+  }
+
+  // Social links
+  .social-link {
+    background-color: $dark-light;
+    i {
+      color: $dark-white;
+    }
+    &:hover {
+      background-color: $dark-smoke;
     }
   }
 }

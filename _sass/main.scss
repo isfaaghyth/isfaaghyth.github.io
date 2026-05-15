@@ -1,45 +1,49 @@
-// Fonts preferences
-$sans-family: Roboto, sans-serif;
-$mono-family: 'JetBrains Mono', monospace;
+// Font families
+$sans-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$serif-family: "Source Serif 4", "Georgia", "Times New Roman", serif;
+$mono-family: "JetBrains Mono", "SF Mono", "Fira Code", "Cascadia Code",
+  Consolas, Menlo, Monaco, monospace;
+
+// Base sizing
 $base-font-size: 16px;
-$medium-font-size: $base-font-size * 0.938;
-$small-font-size: $base-font-size * 0.875;
-$base-line-height: 1.85;
+$medium-font-size: $base-font-size * 0.9375; // 15px
+$small-font-size: $base-font-size * 0.875; // 14px
+$base-line-height: 1.7;
 
 // Font weight
-// $light-weight: 300; // uncomment if necessary
 $normal-weight: 400;
+$medium-weight: 500;
 $bold-weight: 700;
-// $black-weight: 900; // uncomment if necessary
 
-//Light Colors
-$text-base-color: #434648;
-$text-link-blue: #003fff;
-$text-link-blue-active: #0036c7;
+// Light Colors
+$text-base-color: #2d2f36;
+$text-link-blue: #2563eb;
+$text-link-blue-active: #1d4ed8;
 
-$black: #0d122b;
-$light: #ececec;
-$smoke: #d2c7c7;
-$gray: #6b7886;
-$white: #fff;
+$black: #0f1117;
+$light: #e8e8ea;
+$smoke: #c5c6cc;
+$gray: #6b7280;
+$white: #ffffff;
 
 // Dark Colors
-$dark-text-base-color: #c7bebe;
-$dark-text-link-blue: #f3e10a;
-$dark-text-link-blue-active: #b9ab0e;
+$dark-text-base-color: #d1d5db;
+$dark-text-link-blue: #6ec6d8;
+$dark-text-link-blue-active: #8bd4e4;
 
-$dark-black: #131418;
-$dark-white: #eaeaea;
-$dark-light: #1b1d25;
-$dark-smoke: #4a4d56;
-$dark-gray: #767f87;
+$dark-black: #0f1117;
+$dark-white: #f3f4f6;
+$dark-light: #1a1c23;
+$dark-smoke: #4a4e5a;
+$dark-gray: #9ca3af;
 
 // Width of the content area
-$wide-size: 890px;
+$wide-size: 920px;
 $narrow-size: 720px;
 
 // Padding unit
-$spacing-full: 30px;
+$spacing-full: 40px;
 $spacing-half: $spacing-full / 2;
 
 // State of devices

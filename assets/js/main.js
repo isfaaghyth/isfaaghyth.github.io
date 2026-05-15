@@ -28,4 +28,22 @@
       ? area.classList.add("blurry")
       : area.classList.remove("blurry");
   });
+
+  // Back to top button
+  const backToTop = document.getElementById("back-to-top");
+  if (backToTop) {
+    const toggleBackToTop = () => {
+      if (window.scrollY > 300) {
+        backToTop.classList.add("visible");
+      } else {
+        backToTop.classList.remove("visible");
+      }
+    };
+
+    window.addEventListener("scroll", toggleBackToTop);
+
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
 })();

@@ -3,26 +3,45 @@ layout: default
 home: true
 ---
 
-<h2 class="posts-item-note" aria-label="Recent Posts">Berita</h2>
+{%- if site.posts.size > 0 -%}
+<h2 class="posts-item-note" aria-label="Recent Posts">Latest Posts</h2>
+  {%- for post in site.posts limit: 3 -%}
+  <article class="post-item">
+    <span class="post-item-date">{{ post.date | date: "%b %d, %Y" }}</span>
+    <h4 class="post-item-title">
+      <a href="{{ post.url }}">{{ post.emoticon | default: "" }} {{ post.title | escape }}</a>
+    </h4>
+  </article>
+  {%- endfor -%}
+  <br>
+{%- else -%}
+  <!-- No posts yet — section hidden -->
+{%- endif -%}
+
+<h2 class="posts-item-note" aria-label="Recent Posts">News</h2>
 {%- for pers in site.data.pers -%}
-<article class="post-item">
-  <h4 class="post-item-title">
-    <a href="{{ pers.url }}" target="_blank" rel="noopener">{{ pers.title }}</a>
-    <br><b>{{ pers.subtitle }}</b>
-  </h4>
-</article>
+<div class="card-item">
+  <article class="post-item">
+    <h4 class="post-item-title">
+      <a href="{{ pers.url }}" target="_blank" rel="noopener">{{ pers.title }}</a>
+      <br><b>{{ pers.subtitle }}</b>
+    </h4>
+  </article>
+</div>
 {%- endfor -%}
 
 <br>
 
-<h2 class="posts-item-note" aria-label="Recent Posts">Presentasi</h2>
+<h2 class="posts-item-note" aria-label="Recent Posts">Slides</h2>
 {%- for link in site.data.links -%}
-<article class="post-item">
-  <h4 class="post-item-title">
-    <a href="{{ link.url }}" target="_blank" rel="noopener"><img src="{{ link.icon }}" class="post-icon" /> {{
-      link.title }}</a>
-  </h4>
-</article>
+<div class="card-item">
+  <article class="post-item">
+    <h4 class="post-item-title">
+      <a href="{{ link.url }}" target="_blank" rel="noopener"><img src="{{ link.icon }}" class="post-icon" /> {{
+        link.title }}</a>
+    </h4>
+  </article>
+</div>
 {%- endfor -%}
 
 <br>

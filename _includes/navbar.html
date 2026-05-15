@@ -42,6 +42,7 @@
         <circle cx="256" cy="256" r="80" style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px" />
       </svg>
     </a>
+    <span class="site-domain">isfa.dev</span>
     <div class="trigger">
       <div class="trigger-container">
         {%- assign url = page.url -%}
@@ -59,8 +60,8 @@
         {%- endif -%}
         {%- endfor -%}
         {%- else -%}
-        <a class="menu-link {% if url == '/' %}active{% endif %}" href="/">beranda</a>
-        <a class="menu-link {% if url == '/about/' %}active{% endif %}" href="/about">tentang</a>
+        <a class="menu-link {% if url == '/' %}active{% endif %}" href="/">home</a>
+        <a class="menu-link {% if url == '/about/' %}active{% endif %}" href="/about">about</a>
         {%- endif -%}
         <a class="menu-link rss" href="/feed.xml">
           <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 512 512" fill="#ED812E">
