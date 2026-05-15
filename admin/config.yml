@@ -2,6 +2,7 @@ backend:
   name: github
   repo: isfaaghyth/isfaaghyth.github.io
   branch: main
+  base_url: https://symphonious-biscotti-2e11d1.netlify.app
 
 media_folder: "assets/images/uploads"
 public_folder: "/assets/images/uploads"
