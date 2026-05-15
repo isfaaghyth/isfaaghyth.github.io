@@ -64,7 +64,10 @@ async function handleCallback(event) {
       return new Response(JSON.stringify(data), { status: 400, headers: { "Content-Type": "application/json" } })
     }
 
-    const origin = state || ORIGIN
+    let origin = state || ORIGIN
+    try {
+      origin = decodeURIComponent(origin)
+    } catch (_) {}
     return new Response(renderPage(data.access_token, origin), {
       status: 200,
       headers: { "Content-Type": "text/html" },
@@ -78,6 +81,8 @@ async function handleCallback(event) {
 }
 
 function renderPage(token, origin) {
+  const originClean = origin.replace(/\/$/, "")
+  const data = JSON.stringify({ token, provider: "github" })
   return `<!doctype html>
 <html>
   <head>
@@ -86,17 +91,23 @@ function renderPage(token, origin) {
   </head>
   <body>
     <script>
-      window.opener.postMessage(
-        ${JSON.stringify({
-          token,
-          provider: "github",
-          backendName: "github",
-        })},
-        "${origin.replace(/\/$/, "")}"
-      )
-      window.close()
+      var data = ${data};
+      var origin = "${originClean}";
+      try {
+        if (window.opener) {
+          window.opener.postMessage(data, origin);
+        }
+      } catch (e) {}
+      if (window.opener && !window.opener.closed) {
+        setTimeout(function() {
+          try { window.opener.postMessage(data, origin); } catch (e) {}
+          try { window.close(); } catch (e) {}
+        }, 500);
+      } else {
+        window.location.href = origin + "/admin/#access_token=" + encodeURIComponent(data.token) + "&provider=github";
+      }
     </script>
-    <p>Authorization successful. You can close this window.</p>
+    <p>Authorization successful. <a href="${originClean}/admin/#access_token=${encodeURIComponent(token)}&provider=github">Click here if you are not redirected.</a></p>
   </body>
 </html>`
 }
