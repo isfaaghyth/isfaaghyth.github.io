@@ -68,6 +68,9 @@ async function handleCallback(event) {
     try {
       origin = decodeURIComponent(origin)
     } catch (_) {}
+    if (!/^https?:\/\//.test(origin)) {
+      origin = "https://" + origin
+    }
     return new Response(renderPage(data.access_token, origin), {
       status: 200,
       headers: { "Content-Type": "text/html" },
