@@ -41,6 +41,7 @@ kramdown:
 defaults:
   - scope:
       path: ""
+      type: posts
     values:
       layout: post
       comments: false
@@ -67,11 +68,9 @@ sass:
 include:
   - _redirects
   - .htaccess
-  - admin
 
 exclude:
   - CNAME
-  - oauth-proxy
   - Gemfile
   - Gemfile.lock
   - LICENSE
@@ -83,6 +82,7 @@ exclude:
   - lighthouse.png
   - klise-*.gem
   - klise.gemspec
+  - tina/__generated__
 
 # Plugins
 plugins:
