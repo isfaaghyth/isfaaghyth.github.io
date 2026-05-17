@@ -38,16 +38,6 @@ export default defineConfig({
         fields: [
           {
             type: "string",
-            name: "layout",
-            label: "Layout",
-            required: true,
-            ui: {
-              component: () => null,
-            },
-            default: "post",
-          },
-          {
-            type: "string",
             name: "title",
             label: "Title",
             isTitle: true,
