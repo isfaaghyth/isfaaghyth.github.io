@@ -16,22 +16,23 @@ comments: false
   {% endif %}
 </div>
 
-Hey there! 👋🏼
+I'm **Isfa**, a Google Developer Expert (GDE) for Android and a product engineer with 10+ years of experience across multiple platforms.
 
-I'm **Isfa** — an Android GDE and full-stack engineer with 10+ years of experience. These days I'm really into multiplatform mobile apps — everything from KMP and Lynx to Compose, plus digging into app performance and testing.
+I currently work as an Android Architect and multiplatform development with KMP and Lynx, with a focus on app performance, architecture at scale, and agentic &amp; loop engineering.
 
-Right now, I'm a Software Engineer at ByteDance working on the Tokopedia product, one of Indonesia's biggest e-commerce platforms. I lead the technical side of the Browse Team, which covers the home page of the Tokopedia Consumer App, plus the Navigation module and Recommendation Engine for both Android and iOS.
+Previously, I spent most of my career within the Tokopedia ecosystem: I joined Tokopedia while it was still a standalone company after my bachelor's graduation, moved to Gojek as a Senior Product Engineer following the GoTo merger, and most recently served as a Lead and R&amp;D Engineer on the Platform team at ByteDance for TikTok Shop product.
 
-Besides Tokopedia, I'm also helping build [dailyfriend.ai](https://dailyfriend.ai/), an AI-companion app for anyone who wants a friend to chat with 24/7. And together with [my team](https://kepul.id/team), I run [kepul.id](https://kepul.id/) — a waste-trading business in Medan and Gading Serpong where you can sell recyclable goods at competitive prices.
+I also run a partnership product with my colleagues to build a circular-economy platform that manages recyclable waste trading in Indonesia, [kepul.id](https://kepul.id/).
 
-Previously, I co-led [GDG Jakarta](https://gdg.community.dev/gdg-jakarta) — a Google developer community — for 8 years, helping folks learn about Android, Firebase, Google Cloud, and more.
+Community contribution is a significant part of my work. I served for 8+ years as Co-Lead of [GDG Jakarta](https://gdg.community.dev/gdg-jakarta), a Google developer community focused on advocating Google technologies, helping developers build Android apps, adopt Firebase, deploy on GCP, and more.
 
-I graduated summa cum-laude (3.99 GPA) in 2019 from [STT Terpadu Nurul Fikri](https://nurulfikri.ac.id/) with a major in Informatics Engineering. During college, I was a [DSC Lead](https://developers.googleblog.com/id/calling-all-students-learn-how-to-become-a-google-developer-student-club-lead/) for 2 years, and thanks to that contribution, I got the chance to attend [Google I/O](https://io.google/) in Mountain View, California.
+I graduated summa cum-laude (3.99/4.00 GPA) in 2019 from [STT Terpadu Nurul Fikri](https://nurulfikri.ac.id/) with a major in computer science.
+
+I can be reached at [isfhaani@gmail.com](mailto:isfhaani@gmail.com) / [isfa@ghiath.id](mailto:isfa@ghiath.id).
 
 **Gear**
 - M1 MacBook Pro 2021, Lenovo X1 Carbon
 - LG LED 25" IPS 25UM58
-
 
 **Misc**
 
@@ -48,4 +49,4 @@ or via:
 $ keybase id isfaaghyth
 ```
 
-Thanks for stopping by! 🌴
+Thanks for stopping by!
