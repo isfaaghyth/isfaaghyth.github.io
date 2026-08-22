@@ -15,10 +15,41 @@ home: true
   {%- endfor -%}
   <br>
 {%- else -%}
-  <!-- No posts yet — section hidden -->
+  <!-- No posts yet - section hidden -->
 {%- endif -%}
 
-<h2 class="posts-item-note" aria-label="Recent Posts">News</h2>
+<h2 class="posts-item-note" aria-label="Slides">Slides</h2>
+{%- assign visible_slides = site.data.links | slice: 0, 3 -%}
+{%- for link in visible_slides -%}
+<div class="card-item">
+  <article class="post-item">
+    <h4 class="post-item-title">
+      <a href="{{ link.url }}" target="_blank" rel="noopener">{% if link.icon %}<img src="{{ link.icon }}" class="post-icon" /> {% endif %}{{ link.title }}</a>
+      {% if link.event %}<span class="post-item-subtitle">{{ link.event }}</span>{% endif %}
+    </h4>
+  </article>
+</div>
+{%- endfor -%}
+{%- if site.data.links.size > 3 -%}
+<button id="load-more-slides" class="load-more-btn" onclick="document.getElementById('more-slides').style.display='block'; this.style.display='none';">load more...</button>
+<div id="more-slides" style="display:none;">
+{%- assign hidden_slides = site.data.links | slice: 3, 100 -%}
+{%- for link in hidden_slides -%}
+<div class="card-item">
+  <article class="post-item">
+    <h4 class="post-item-title">
+      <a href="{{ link.url }}" target="_blank" rel="noopener">{% if link.icon %}<img src="{{ link.icon }}" class="post-icon" /> {% endif %}{{ link.title }}</a>
+      {% if link.event %}<span class="post-item-subtitle">{{ link.event }}</span>{% endif %}
+    </h4>
+  </article>
+</div>
+{%- endfor -%}
+</div>
+{%- endif %}
+
+<br>
+
+<h2 class="posts-item-note" aria-label="News">News</h2>
 {%- for pers in site.data.pers -%}
 <div class="card-item">
   <article class="post-item">
@@ -29,19 +60,5 @@ home: true
   </article>
 </div>
 {%- endfor -%}
-
-<br>
-
-<h2 class="posts-item-note" aria-label="Recent Posts">Slides</h2>
-{%- for link in site.data.links -%}
-<div class="card-item">
-  <article class="post-item">
-    <h4 class="post-item-title">
-      <a href="{{ link.url }}" target="_blank" rel="noopener">{% if link.icon %}<img src="{{ link.icon }}" class="post-icon" /> {% endif %}{{ link.title }}</a>
-      {% if link.event %}<span class="post-item-subtitle">{{ link.event }}</span>{% endif %}
-    </h4>
-  </article>
-</div>
-{%- endfor %}
 
 <br>

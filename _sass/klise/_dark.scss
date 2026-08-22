@@ -203,6 +203,14 @@ body[data-theme="dark"] {
     }
   }
 
+  .load-more-btn {
+    color: $dark-gray;
+
+    &:hover {
+      color: $dark-white;
+    }
+  }
+
   // Site domain
   .menu .site-domain {
     color: $dark-white;
