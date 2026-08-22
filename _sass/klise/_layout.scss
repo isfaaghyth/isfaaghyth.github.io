@@ -380,61 +380,6 @@
   }
 }
 
-// Card with thumbnail layout
-.card-item--with-thumbnail {
-  padding: 0;
-  overflow: hidden;
-
-  .card-item-link {
-    display: flex;
-    text-decoration: none;
-    color: inherit;
-    align-items: stretch;
-
-    &:hover {
-      .card-item-thumbnail img {
-        opacity: 0.9;
-      }
-    }
-  }
-
-  .card-item-thumbnail {
-    flex-shrink: 0;
-    width: 120px;
-    height: 70px;
-    padding: 6px;
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.04);
-    border-radius: 6px;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 4px;
-      transition: opacity 0.2s ease;
-    }
-  }
-
-  .card-item-content {
-    flex-grow: 1;
-    padding: 12px 14px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-
-    .post-item-title {
-      margin: 0;
-      a {
-        color: inherit;
-        text-decoration: none;
-        &:hover { color: $black; }
-      }
-    }
-  }
-}
-
 // Footer
 .footer {
   margin-top: 6rem;

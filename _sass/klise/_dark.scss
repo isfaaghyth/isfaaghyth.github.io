@@ -203,14 +203,6 @@ body[data-theme="dark"] {
     }
   }
 
-  .card-item--with-thumbnail .card-item-thumbnail {
-    background-color: rgba(255, 255, 255, 0.06);
-  }
-
-  .card-item--with-thumbnail .card-item-content .post-item-title a:hover {
-    color: $dark-white;
-  }
-
   // Site domain
   .menu .site-domain {
     color: $dark-white;

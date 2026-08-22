@@ -34,19 +34,6 @@ home: true
 
 <h2 class="posts-item-note" aria-label="Recent Posts">Slides</h2>
 {%- for link in site.data.links -%}
-{%- if link.thumbnail -%}
-<div class="card-item card-item--with-thumbnail">
-  <a href="{{ link.url }}" target="_blank" rel="noopener" class="card-item-link">
-    <div class="card-item-thumbnail">
-      <img src="{{ link.thumbnail }}" alt="{{ link.title }}" loading="lazy" />
-    </div>
-    <div class="card-item-content">
-      <h4 class="post-item-title">{{ link.title }}</h4>
-      {% if link.event %}<span class="post-item-subtitle">{{ link.event }}</span>{% endif %}
-    </div>
-  </a>
-</div>
-{%- else -%}
 <div class="card-item">
   <article class="post-item">
     <h4 class="post-item-title">
@@ -55,7 +42,6 @@ home: true
     </h4>
   </article>
 </div>
-{%- endif -%}
-{%- endfor -%}
+{%- endfor %}
 
 <br>
