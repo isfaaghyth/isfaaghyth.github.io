@@ -24,14 +24,14 @@ Previously, I spent most of my career within the Tokopedia ecosystem: I joined T
 
 I also run a partnership product with my colleagues to build a circular-economy platform that manages recyclable waste trading in Indonesia, [kepul.id](https://kepul.id/).
 
-Community contribution is a significant part of my work. I served for 8+ years as Co-Lead of [GDG Jakarta](https://gdg.community.dev/gdg-jakarta), a Google developer community focused on advocating Google technologies, helping developers build Android apps, adopt Firebase, deploy on GCP, and more.
+Community contribution is a significant part of my work. I served for 8+ years as Co-Lead of [GDG Jakarta](https://gdg.community.dev/gdg-jakarta), a Google developer community focused on advocating Google tech, helping developers build Android apps, adopt Firebase, deploy on GCP, and more.
 
 I graduated summa cum-laude (3.99/4.00 GPA) in 2019 from [STT Terpadu Nurul Fikri](https://nurulfikri.ac.id/) with a major in computer science.
 
 I can be reached at [isfhaani@gmail.com](mailto:isfhaani@gmail.com) / [isfa@ghiath.id](mailto:isfa@ghiath.id).
 
 **Gear**
-- M1 MacBook Pro 2021, Lenovo X1 Carbon
+- M4 Pro MacBook Pro, Lenovo X1 Carbon
 - LG LED 25" IPS 25UM58
 
 **Misc**
