@@ -380,6 +380,26 @@
   }
 }
 
+// Load more button
+.load-more-btn {
+  display: inline-block;
+  margin: 8px 4px;
+  padding: 4px 12px;
+  font-size: $small-font-size;
+  font-weight: $bold-weight;
+  color: $gray;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  font-family: $sans-family;
+
+  &:hover {
+    color: $black;
+    opacity: 1;
+  }
+}
+
 // Footer
 .footer {
   margin-top: 6rem;
