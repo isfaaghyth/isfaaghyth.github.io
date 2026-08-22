@@ -31,7 +31,6 @@ home: true
 </div>
 {%- endfor -%}
 {%- if site.data.links.size > 3 -%}
-<a id="load-more-slides" class="load-more-link" onclick="var el=document.getElementById('more-slides'); if(el.style.display==='none'){el.style.display='block'; this.innerHTML='show less...';} else {el.style.display='none'; this.innerHTML='load more...';}">load more...</a>
 <div id="more-slides" style="display:none;">
 {%- assign hidden_slides = site.data.links | slice: 3, 100 -%}
 {%- for link in hidden_slides -%}
@@ -45,6 +44,7 @@ home: true
 </div>
 {%- endfor -%}
 </div>
+<a id="load-more-slides" class="load-more-link" onclick="var el=document.getElementById('more-slides'); if(el.style.display==='none'){el.style.display='block'; this.innerHTML='show less...';} else {el.style.display='none'; this.innerHTML='load more...';}">load more...</a>
 {%- endif %}
 
 <br>
