@@ -1,75 +1,61 @@
+slides:
 - title: Vibe your Android App into KMP
   event: Build with AI - GDG Bogor & GDG Makassar
   icon: https://kotlinlang.org/images/multiplatform/hero/logo.svg
   url: https://docs.google.com/presentation/d/1xrzHGRDaLFsEyeblojXm2KEhgQ7G4UAEiGtybE7ofcE/edit?slide=id.p#slide=id.p
-
 - title: Discover Large Screen Support
   event: Google I/O Extended GDG Depok
   icon: https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/google-material-design-icon.png
   url: https://docs.google.com/presentation/d/1RedSRpTFKibmrzoZDXrE6G8unyQYQl8zBM033Z-AB1s/edit?usp=sharing
-
 - title: KMP MCP - Syncing Data from Multiplatform App to AI Agents
   event: DevFest GDG Bali
   icon: https://registry.npmmirror.com/@lobehub/icons-static-png/1.56.0/files/dark/mcp.png
   url: https://docs.google.com/presentation/d/1ViksCG970tUIXoi0PO5mdzGLfu92fCmHdfvytPAbq6I/edit?usp=sharing
-
 - title: Build multi-device and multi-screen app with KMP and Compose Multiplatform
   event: DevFest GDG Jakarta
   icon: https://images.ctfassets.net/23aumh6u8s0i/4JQe27JmEip0X21uRGa0sr/ae23bfa547ed18a019c6fd92615f1eff/jetpack_compose_icon.png
   url: https://docs.google.com/presentation/d/1HtPm4Vs0JP25mMRcYtPXwrrvZgjm8z7xup09CGOt0zU/edit?slide=id.g29ee8f05d9e_0_173#slide=id.g29ee8f05d9e_0_173
-
 - title: Navigation and app architecture introduction
   event: JuaraAndroid Indonesia
   icon: /assets/img/android.png
   url: https://docs.google.com/presentation/d/1kN3OBse4Ul7V3T6Qme9beif2TtQKUmAGSm8SdQDokCI/edit?usp=sharing
-
 - title: Mobius Framework - A State Management for Multiplatform
   event: DevFest GDG Jakarta, Makassar & GDG Bogor
   url: https://docs.google.com/presentation/d/1AxdrUI8HybxbzOZM9RkmsFggw99XpRJu7_0wnTt1yyk/edit?usp=sharing
-
 - title: Whats new in Android
   event: DevFest GDG Medan
   icon: /assets/img/android.png
   url: https://docs.google.com/presentation/d/1V-adKCG2FuGkAtB2YdhNgnfb4ysjNXw2tMuxxN8wA04/edit?usp=sharing
-
 - title: Software Architecture Component
   event: Google DSC
   icon: /assets/img/android.png
   url: https://docs.google.com/presentation/d/1Vgn4lZqQN5zkAlqKKtXLVcibolVItplT-S85xnBmW8k/edit?usp=sharing
-
 - title: Unit Testing on Android
   event: NgoprekBareng \#2
   icon: /assets/img/android.png
   url: https://docs.google.com/presentation/d/1VLSNVklZXo5hAfsqL9BEINr-Ez__PpaUArSo2zF8pGg/edit?usp=sharing
-
 - title: Android Modularization in a Nutshell
   event: Android VIP
   url: https://drive.google.com/file/d/1rkgaMq6wrZg7o4VDwj-4_P2e6ZjgdkON/view?usp=sharing
-
 - title: Use Visitable Pattern for Recyclerview on Android
   event: WeekendSharing
   icon: /assets/img/android.png
   url: https://docs.google.com/presentation/d/1yeNwXZuxRLwoI46ZYFv-CZcQSkTOZaqzjwLZi0DfGBs/edit?slide=id.p#slide=id.p
-
 - title: Become Future Ready for Tech Industry
   event: GDG Telkom University
   url: https://drive.google.com/file/d/1BGFLd5RClBKxMZ-tM4hd4kXmBl6CA4kx/view?usp=sharing
-
 - title: Android Fundamental
   event: NgoprekBareng \#1
   icon: /assets/img/android.png
   url: https://docs.google.com/presentation/d/1BFjz5LoElOul7LRlx3qIRIwieASMZ6GOpn65yq4MkTQ/edit?usp=sharing
-
 - title: Introduction to Flutter
   event: Google I/O Extended GDG Depok
   icon: /assets/img/flutter.png
   url: https://drive.google.com/file/d/15zgskLOM9AKSj_Cg57L4nyVYw9-tQVro/view?usp=sharing
-
 - title: Liberating Code with Kotlin
   event: Android DevTalks
   icon: /assets/img/kotlin.png
   url: /assets/files/liberating_kotlin.pdf
-
 - title: Jetpack Compose Introduction
   event: Google I/O Extended GDG Depok & Jakarta
   icon: /assets/img/jetpack_compose.png

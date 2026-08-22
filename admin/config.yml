@@ -1,0 +1,100 @@
+# Decap CMS configuration
+# https://decapcms.org/docs/configuration-options/
+#
+# Backend: GitHub. For self-hosted auth, register a GitHub OAuth App and
+# point the `base_url` / `auth_endpoint` at it (e.g. a small serverless
+# function or a shared OAuth proxy). See https://decapcms.org/docs/github-backend/
+
+backend:
+  name: github
+  repo: isfaaghyth/isfaaghyth.github.io
+  branch: main
+  site_domain: isfa.dev
+  squash_merges: true
+
+# By default Decap logs in with a popup to the GitHub website.
+# For self-hosted OAuth, add:
+#   base_url: https://your-oauth-host.example.com
+#   auth_endpoint: /auth
+# Omitting these keeps the default GitHub implicit-grant login flow working.
+
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    label_singular: "Post"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Categories", name: "categories", widget: "list", required: false }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "slides"
+    label: "Slides"
+    label_singular: "Slide"
+    files:
+      - name: "slides"
+        label: "Slides list"
+        file: "_data/links.yml"
+        fields:
+          - label: "Slides"
+            name: "slides"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Event", name: "event", widget: "string", required: false }
+              - { label: "Icon", name: "icon", widget: "string", required: false }
+              - { label: "URL", name: "url", widget: "string" }
+
+  - name: "news"
+    label: "News"
+    label_singular: "News item"
+    files:
+      - name: "news"
+        label: "News list"
+        file: "_data/pers.yml"
+        fields:
+          - label: "News"
+            name: "news"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+              - { label: "URL", name: "url", widget: "string" }
+
+  - name: "menus"
+    label: "Menus"
+    label_singular: "Menu item"
+    files:
+      - name: "menus"
+        label: "Menus list"
+        file: "_data/menus.yml"
+        fields:
+          - label: "Menus"
+            name: "menus"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+              - { label: "External", name: "external", widget: "boolean", default: false, required: false }
+
+  - name: "pages"
+    label: "Pages"
+    label_singular: "Page"
+    files:
+      - name: "about"
+        label: "About page"
+        file: "about.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Permalink", name: "permalink", widget: "string", required: false }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+          - { label: "Excerpt", name: "excerpt", widget: "text", required: false }
+          - { label: "Comments", name: "comments", widget: "boolean", default: false, required: false }
+          - { label: "Body", name: "body", widget: "markdown" }

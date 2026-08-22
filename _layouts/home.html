@@ -19,7 +19,8 @@ home: true
 {%- endif -%}
 
 <h2 class="posts-item-note" aria-label="Slides">Slides</h2>
-{%- assign visible_slides = site.data.links | slice: 0, 3 -%}
+{%- assign all_slides = site.data.links.slides -%}
+{%- assign visible_slides = all_slides | slice: 0, 3 -%}
 {%- for link in visible_slides -%}
 <div class="card-item">
   <article class="post-item">
@@ -30,9 +31,9 @@ home: true
   </article>
 </div>
 {%- endfor -%}
-{%- if site.data.links.size > 3 -%}
+{%- if site.data.links.slides.size > 3 -%}
 <div id="more-slides" style="display:none;">
-{%- assign hidden_slides = site.data.links | slice: 3, 100 -%}
+{%- assign hidden_slides = site.data.links.slides | slice: 3, 100 -%}
 {%- for link in hidden_slides -%}
 <div class="card-item">
   <article class="post-item">
@@ -50,7 +51,7 @@ home: true
 <br>
 
 <h2 class="posts-item-note" aria-label="News">News</h2>
-{%- for pers in site.data.pers -%}
+{%- for pers in site.data.pers.news -%}
 <div class="card-item">
   <article class="post-item">
     <h4 class="post-item-title">

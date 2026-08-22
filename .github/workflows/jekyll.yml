@@ -26,21 +26,6 @@ jobs:
           ruby-version: "3.3"
           bundler-cache: true
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Install TinaCMS
-        run: npm install
-
-      - name: Build with TinaCMS
-        env:
-          TINA_PUBLIC_CLIENT_ID: ${{ secrets.TINA_PUBLIC_CLIENT_ID }}
-          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
-          TINA_BRANCH: ${{ secrets.TINA_BRANCH }}
-        run: npx tinacms build
-
       - name: Build Jekyll
         run: bundle exec jekyll build
 
