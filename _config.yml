@@ -82,7 +82,6 @@ exclude:
   - lighthouse.png
   - klise-*.gem
   - klise.gemspec
-  - tina/__generated__
 
 # Plugins
 plugins:
