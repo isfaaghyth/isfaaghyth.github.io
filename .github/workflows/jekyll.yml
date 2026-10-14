@@ -26,15 +26,30 @@ jobs:
           ruby-version: "3.3"
           bundler-cache: true
 
+      # The Tina admin only changes when its config or dependencies do, so reuse the
+      # last build for content-only pushes (most CMS saves) and skip Node entirely.
+      - name: Restore Tina admin build
+        id: tina-cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            admin/index.html
+            admin/assets
+          key: tina-admin-${{ hashFiles('tina/config.ts', 'tina/tina-lock.json', 'package-lock.json') }}
+
       - name: Setup Node
+        if: steps.tina-cache.outputs.cache-hit != 'true'
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
+          cache: npm
 
       - name: Install TinaCMS
-        run: npm install
+        if: steps.tina-cache.outputs.cache-hit != 'true'
+        run: npm ci --no-audit --no-fund
 
       - name: Build with TinaCMS
+        if: steps.tina-cache.outputs.cache-hit != 'true'
         env:
           TINA_PUBLIC_CLIENT_ID: ${{ secrets.TINA_PUBLIC_CLIENT_ID }}
           TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
