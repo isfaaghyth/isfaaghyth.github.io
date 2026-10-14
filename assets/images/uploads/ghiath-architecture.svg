@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 660" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" role="img" aria-label="Ghiath architecture: two isolated agents, work and home, each with its own Telegram bot, vault, Qdrant collection and CouchDB database, plus shared KeiRouter, hermes cron with ntfy, and Caddy">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker>
+    <style>
+      .t{font-size:14px;font-weight:600;fill:#0f172a;text-anchor:middle}
+      .s{font-size:11.5px;fill:#475569;text-anchor:middle}
+      .l{font-size:11px;fill:#64748b;text-anchor:middle;font-style:italic}
+      .h{font-size:13px;font-weight:700;letter-spacing:.08em;text-anchor:middle}
+      .ln{stroke:#64748b;stroke-width:1.5;fill:none;marker-end:url(#a)}
+      .w{fill:#eff6ff;stroke:#3b82f6;stroke-width:1.5}
+      .m{fill:#ecfdf5;stroke:#10b981;stroke-width:1.5}
+      .g{fill:#f8fafc;stroke:#94a3b8;stroke-width:1.5}
+    </style>
+  </defs>
+  <rect width="800" height="660" rx="16" fill="#ffffff"/>
+
+  <text x="220" y="34" class="h" fill="#2563eb">WORK · me only</text>
+  <text x="580" y="34" class="h" fill="#059669">HOME · me + partner</text>
+  <line x1="400" y1="20" x2="400" y2="470" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="6 6"/>
+  <text x="400" y="486" class="l">the two columns never meet</text>
+
+  <!-- work column -->
+  <rect x="130" y="52" width="180" height="44" rx="10" class="w"/>
+  <text x="220" y="72" class="t">Telegram</text><text x="220" y="88" class="s">work bot</text>
+  <path d="M220 96 V128" class="ln"/>
+  <rect x="130" y="130" width="180" height="50" rx="10" class="w"/>
+  <text x="220" y="152" class="t">work agent</text><text x="220" y="169" class="s">hermes · GLM 5.1 · confirm gate</text>
+  <path d="M220 180 V212" class="ln"/>
+  <rect x="130" y="214" width="180" height="50" rx="10" class="w"/>
+  <text x="220" y="236" class="t">vault-work/</text><text x="220" y="253" class="s">Markdown memory</text>
+  <path d="M180 264 L150 316" class="ln"/><path d="M260 264 L290 316" class="ln"/>
+  <text x="140" y="294" class="l">embeds</text><text x="306" y="294" class="l">replicates</text>
+  <rect x="85" y="318" width="130" height="50" rx="10" class="w"/>
+  <text x="150" y="340" class="t">Qdrant</text><text x="150" y="357" class="s">vault_work</text>
+  <rect x="225" y="318" width="130" height="50" rx="10" class="w"/>
+  <text x="290" y="340" class="t">CouchDB</text><text x="290" y="357" class="s">ghiath</text>
+  <path d="M290 368 V400" class="ln"/>
+  <rect x="215" y="402" width="150" height="44" rx="10" class="w"/>
+  <text x="290" y="429" class="s">my laptop + phone</text>
+
+  <!-- home column -->
+  <rect x="490" y="52" width="180" height="44" rx="10" class="m"/>
+  <text x="580" y="72" class="t">Telegram</text><text x="580" y="88" class="s">home bot</text>
+  <path d="M580 96 V128" class="ln"/>
+  <rect x="490" y="130" width="180" height="50" rx="10" class="m"/>
+  <text x="580" y="152" class="t">home agent</text><text x="580" y="169" class="s">hermes · DeepSeek v4 Flash</text>
+  <path d="M580 180 V212" class="ln"/>
+  <rect x="490" y="214" width="180" height="50" rx="10" class="m"/>
+  <text x="580" y="236" class="t">vault-home/</text><text x="580" y="253" class="s">Markdown memory</text>
+  <path d="M540 264 L510 316" class="ln"/><path d="M620 264 L650 316" class="ln"/>
+  <text x="494" y="294" class="l">embeds</text><text x="668" y="294" class="l">replicates</text>
+  <rect x="445" y="318" width="130" height="50" rx="10" class="m"/>
+  <text x="510" y="340" class="t">Qdrant</text><text x="510" y="357" class="s">vault_home</text>
+  <rect x="585" y="318" width="130" height="50" rx="10" class="m"/>
+  <text x="650" y="340" class="t">CouchDB</text><text x="650" y="357" class="s">ghiath-home</text>
+  <path d="M650 368 V400" class="ln"/>
+  <rect x="575" y="402" width="150" height="44" rx="10" class="m"/>
+  <text x="650" y="429" class="s">both phones</text>
+
+  <!-- shared band -->
+  <rect x="24" y="504" width="752" height="132" rx="12" fill="#f1f5f9"/>
+  <text x="400" y="526" class="h" fill="#475569">SHARED INFRASTRUCTURE</text>
+  <rect x="44" y="542" width="200" height="76" rx="10" class="g"/>
+  <text x="144" y="568" class="t">KeiRouter</text>
+  <text x="144" y="586" class="s">every LLM call goes here</text>
+  <text x="144" y="602" class="s">holds the provider keys</text>
+
+  <rect x="264" y="542" width="110" height="76" rx="10" class="g"/>
+  <text x="319" y="570" class="t">hermes cron</text><text x="319" y="588" class="s">reminder-tick.py</text><text x="319" y="604" class="s">every minute</text>
+  <path d="M374 580 H396" class="ln"/>
+  <rect x="398" y="542" width="96" height="76" rx="10" class="g"/>
+  <text x="446" y="574" class="t">ntfy</text><text x="446" y="592" class="s">2 topics</text>
+  <path d="M494 580 H516" class="ln"/>
+  <rect x="518" y="542" width="80" height="76" rx="10" class="g"/>
+  <text x="558" y="576" class="t">phone</text><text x="558" y="594" class="s">alarm</text>
+
+  <rect x="618" y="542" width="138" height="76" rx="10" class="g"/>
+  <text x="687" y="568" class="t">Caddy</text>
+  <text x="687" y="586" class="s">HTTPS proxy</text>
+  <text x="687" y="602" class="s">VPS only</text>
+</svg>

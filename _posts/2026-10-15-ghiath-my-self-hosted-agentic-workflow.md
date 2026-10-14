@@ -64,31 +64,7 @@ Reminders were the feature I used most, and the first design ran them through n8
 
 ## Architecture
 
-```
-   Telegram (work bot)                    Telegram (home bot)
-            |                                      |
-            v                                      v
-   +------------------+                   +------------------+
-   |   work agent     |                   |   home agent     |
-   |   (hermes)       |                   |   (hermes)       |
-   +--------+---------+                   +---------+--------+
-            |                                       |
-            v                                       v
-   +------------------+                   +------------------+
-   |   vault-work/    |                   |   vault-home/    |
-   |   (Markdown)     |                   |   (Markdown)     |
-   +--+------------+--+                   +--+------------+--+
-      |            |                         |            |
- embeds|           |replicates         embeds|            |replicates
-      v            v                         v            v
- +---------+  +----------+             +---------+  +----------+
- | Qdrant  |  | CouchDB  |             | Qdrant  |  | CouchDB  |
- +---------+  +----------+             +---------+  +----------+
-
-  Agent LLM calls  ->  KeiRouter (gateway, holds the provider keys)
-  Reminder alarms  ->  hermes cron -> ntfy -> phone
-  Public HTTPS     ->  Caddy (per-subdomain reverse proxy, VPS only)
-```
+![Ghiath architecture: the work and home agents each have their own Telegram bot, Markdown vault, Qdrant collection and CouchDB database, with KeiRouter, the hermes cron to ntfy alarm path, and Caddy shared underneath](/assets/images/uploads/ghiath-architecture.svg)
 
 Each piece has one job:
 
