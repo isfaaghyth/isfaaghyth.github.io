@@ -9,11 +9,13 @@ tags:
   - reverse
 ---
 
+![Sholat running on the Xiaomi Watch S1 Active, showing Subuh 04:16 for Jakarta](/assets/images/uploads/sholat-watch.jpg)
+
 I have worn a Xiaomi Watch S1 Active since around 2022. It is a good watch: a big 466x466 AMOLED screen, long battery life, solid fitness tracking. But there was always one thing that bothered me. I could not build anything for it.
 
 Every few months I would search again. `"Xiaomi Watch S1 SDK."` `"S1 Active sideload app."` `"Mi Watch developer."` The answers were always the same: a partner program I could not join, forum posts asking the same question as me, and tutorials for *other* Xiaomi watches that run a different operating system. The S1 Active sat on my wrist as a closed box.
 
-In 2026 that changed, not because Xiaomi opened anything, but LLM agents got good and cheap. Chinese models (mocin) in particular became surprisingly capable for this case, cheap enough that I could let an agent grind through a reverse engineering for hours with powerful. So I tried again, this time with GLM 5.2 (for reverse) and Claude Opus 5.5 (for building the app), and with one concrete goal: **an Adzan reminder.**
+In 2026 that changed, not because Xiaomi opened anything, but LLM agents got good and cheap. Chinese models (mocin) in particular became surprisingly capable for this case, cheap enough that I could let an agent grind through a reverse engineering for hours with powerful. So I tried again, this time with GLM 5.2 (for reverse) and Claude Opus 5.5 (for building the app), and to build my first app: *Adzan Reminder*.
 
 ## Why an Adzan app
 
@@ -284,7 +286,7 @@ node -e 'var P=require("./watchapp/lite-prayer/src/praytimes.js");var t=P.forDat
 
 ### Step 3: The page logic (`src/page.js`)
 
-One gotcha: do not trust the device timezone. The page takes the UTC epoch from `Date.now()`, adds the fixed offset, and reads everything with the `getUTC*` methods:
+One Caveat: do not trust the device timezone. The page takes the UTC epoch from `Date.now()`, adds the fixed offset, and reads everything with the `getUTC*` methods:
 
 ```js
 function localNow() {
@@ -398,7 +400,7 @@ python3 watchapp/lite-prayer/gen.py
 
 ### Step 5: Bytecode, container, `.rpk`
 
-`build-app.sh` does the rest. The heart of it is three steps:
+`build-app.sh` does the rest. The core builder of it is three steps:
 
 ```bash
 # 1. bytecode: the watch only runs pages that have a .bc next to the .js
@@ -442,7 +444,7 @@ adb shell am instrument -w -e sideload /data/user/0/com.xiaomi.wearable/files/rp
 
 ***
 
-## The result: "Sholat" on my wrist
+## The Result, Sholat Watch app
 
 The Adzan app is called **Sholat**. It shows today's five prayer times and a live countdown to the next one.
 
