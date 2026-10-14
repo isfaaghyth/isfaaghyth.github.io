@@ -39,7 +39,9 @@ jobs:
           TINA_PUBLIC_CLIENT_ID: ${{ secrets.TINA_PUBLIC_CLIENT_ID }}
           TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
           TINA_BRANCH: ${{ secrets.TINA_BRANCH }}
-        run: npx tinacms build
+        # Don't block site deploys on TinaCloud's schema index; it only affects /admin
+        # and catches up after TinaCloud re-indexes the branch.
+        run: npx tinacms build --skip-cloud-checks
 
       - name: Cache slide thumbnails
         uses: actions/cache@v4
