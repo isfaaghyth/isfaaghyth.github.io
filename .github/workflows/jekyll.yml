@@ -41,6 +41,13 @@ jobs:
           TINA_BRANCH: ${{ secrets.TINA_BRANCH }}
         run: npx tinacms build
 
+      - name: Cache slide thumbnails
+        uses: actions/cache@v4
+        with:
+          path: .cache/thumbs
+          key: slide-thumbs-${{ hashFiles('_data/home.yml', '_data/projects.yml') }}
+          restore-keys: slide-thumbs-
+
       - name: Build Jekyll
         run: bundle exec jekyll build
 

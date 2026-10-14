@@ -1,39 +1,23 @@
-<footer class="footer">
-  <a class="footer_item" href="/feed.xml">RSS</a>
-  <span class="footer_item">&copy; {{ site.time | date: "%Y" }}</span>
-  <small class="footer_copyright">
-    <!-- Klisé Theme: https://github.com/piharpi/jekyll-klise -->
-    theme
-    <a href="https://github.com/piharpi/jekyll-klise" target="_blank" rel="noreferrer noopener">klisé</a>
-    on
-    <a href="https://jekyllrb.com" target="_blank" rel="noreferrer noopener">jekyll</a>
-    with ❤️
-  </small>
+<footer class="footer container">
+  {% include socials.html %}
+  <p class="footer-meta">&copy; {{ site.time | date: "%Y" }} {{ site.data.profile.name }} · Built with <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a></p>
 </footer>
 
-<!-- Back to top button -->
-<button id="back-to-top" aria-label="Back to top">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <polyline points="18 15 12 9 6 15"></polyline>
-  </svg>
+<button id="back-to-top" class="icon-button back-to-top" type="button" aria-label="Back to top">
+  {% include icon.html name="arrow-up" %}
 </button>
 
-<script src="/assets/js/main.js" defer="defer"></script>
+<script src="/assets/js/main.js" defer></script>
 
-{%- if page.google_analytics -%}
-<script src="/assets/js/galite.js"></script>
-<script>
-  var galite = galite || {};
-  galite.UA = "{{ site.google_analytics }}";
-</script>
-{%- endif -%}
-{%- if page.url == '/archive/' -%}
+{%- if page.url == '/blog/' -%}
 <script src="/assets/js/search.min.js"></script>
 <script>
-  var sjs = SimpleJekyllSearch({
+  SimpleJekyllSearch({
     searchInput: document.getElementById('search-input'),
     resultsContainer: document.getElementById('search-results'),
     json: '/assets/search.json',
+    searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+    noResultsText: '<li class="search-empty">No results found</li>',
   });
 </script>
 {%- endif -%}

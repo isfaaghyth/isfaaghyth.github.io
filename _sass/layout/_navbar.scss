@@ -1,0 +1,122 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--color-bg);
+  background: color-mix(in srgb, var(--color-bg) 85%, transparent);
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: var(--nav-height);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-right: auto;
+  color: var(--color-heading);
+  font-family: var(--font-serif);
+  font-size: var(--text-item);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-serif);
+
+  &:hover {
+    color: var(--color-accent);
+  }
+}
+
+.brand-emoji {
+  font-size: var(--text-item);
+  line-height: 1;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.menu-link {
+  @extend %label;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+
+  &:hover {
+    color: var(--color-heading);
+    background: var(--color-surface-2);
+  }
+
+  &.active {
+    color: var(--color-accent);
+  }
+}
+
+.icon-button {
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: color var(--transition), background var(--transition);
+
+  &:hover {
+    color: var(--color-heading);
+    background: var(--color-surface-2);
+  }
+}
+
+.theme-icon-sun { display: none; }
+:root[data-theme="dark"] {
+  .theme-icon-sun { display: block; }
+  .theme-icon-moon { display: none; }
+}
+
+.menu-trigger,
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .menu-toggle {
+    display: inline-grid;
+    order: 3;
+  }
+
+  .menu-close { display: none; }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    padding: var(--space-3) var(--gutter) var(--space-4);
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-card);
+  }
+
+  .menu-link {
+    padding: var(--space-3);
+  }
+
+  .menu-trigger:checked {
+    ~ .menu { display: flex; }
+    ~ .menu-toggle .menu-open { display: none; }
+    ~ .menu-toggle .menu-close { display: block; }
+  }
+}

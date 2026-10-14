@@ -1,0 +1,70 @@
+// Color tokens. Light is the base; dark overrides via [data-theme="dark"].
+:root {
+  color-scheme: light;
+  --color-bg: #f3efe4;
+  --color-surface: #f8f5ec;
+  --color-surface-2: #ebe6d8;
+  --color-border: #ddd6c5;
+  --color-border-strong: #8f877a;
+  --color-text: #2a2722;
+  --color-text-muted: #6b655b;
+  --color-heading: #171512;
+  --color-accent: #1f6650;
+  --color-accent-hover: #164c3c;
+  --color-accent-soft: #e0e6d9;
+  --color-on-accent: #f8f5ec;
+  --color-focus: #1f6650;
+  --color-selection: #d9e3cf;
+  --color-ink: #171512;
+  --color-on-ink: #f3efe4;
+  --shadow-card: 0 1px 2px rgba(23, 21, 18, 0.04), 0 4px 16px rgba(23, 21, 18, 0.06);
+
+  // Syntax highlighting (light)
+  --code-bg: #ebe6d8;
+  --code-inline-bg: #e6e0d0;
+  --code-text: #2a2722;
+  --code-comment: #5f594f;
+  --code-keyword: #a3204e;
+  --code-string: #2f6b1f;
+  --code-number: #1d5a8f;
+  --code-function: #6a3fa0;
+  --code-type: #8a4a06;
+  --code-name: #2a2722;
+  --code-deleted: #a32a1f;
+  --code-inserted: #2f6b1f;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #15130f;
+  --color-surface: #1c1a15;
+  --color-surface-2: #24211b;
+  --color-border: #332f27;
+  --color-border-strong: #6f685c;
+  --color-text: #e2dccd;
+  --color-text-muted: #a39c8e;
+  --color-heading: #f4eee1;
+  --color-accent: #86cbb2;
+  --color-accent-hover: #a9dcc9;
+  --color-accent-soft: #1d2b24;
+  --color-on-accent: #10201a;
+  --color-focus: #86cbb2;
+  --color-selection: #2c4037;
+  --color-ink: #f4eee1;
+  --color-on-ink: #15130f;
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.25);
+
+  // Syntax highlighting (dark)
+  --code-bg: #110f0c;
+  --code-inline-bg: #2a261f;
+  --code-text: #e2dccd;
+  --code-comment: #948d80;
+  --code-keyword: #ff7b9c;
+  --code-string: #a5e3a0;
+  --code-number: #79c0ff;
+  --code-function: #d2a8ff;
+  --code-type: #ffb86b;
+  --code-name: #e2dccd;
+  --code-deleted: #ffa198;
+  --code-inserted: #7ee787;
+}

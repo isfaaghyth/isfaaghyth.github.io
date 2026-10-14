@@ -2,26 +2,31 @@
 title: Tags
 permalink: /tags/
 layout: page
-excerpt: Sorted article by tags.
+excerpt: Articles grouped by tag.
 ---
 
-<div class="archive-tags">
-  <a class="tag-item" href="#">all</a>
-  {%- for tag in site.tags -%} 
-    {% capture name %}{{ tag | first }}{% endcapture %}
-    <a class="tag-item" href="#{{name}}">{{ name }}</a> 
+{%- if site.tags.size == 0 -%}
+<p class="empty-state">No tags yet.</p>
+{%- else -%}
+<ul class="tag-list tag-list--cloud">
+  {%- for tag in site.tags -%}
+  {%- capture name -%}{{ tag | first }}{%- endcapture -%}
+  <li><a class="tag" href="#{{ name | downcase | slugify }}">#{{ name | downcase }} <span class="tag-count">{{ tag | last | size }}</span></a></li>
   {%- endfor -%}
-</div>
+</ul>
 
 {%- for tag in site.tags -%}
-  {%- capture name -%}{{ tag | first }}{%- endcapture -%}
-  <h2 id="{{ name }}">{{ name | upcase }}</h2>
+{%- capture name -%}{{ tag | first }}{%- endcapture -%}
+<h2 class="year-heading" id="{{ name | downcase | slugify }}">#{{ name | downcase }}</h2>
+<ul class="post-list post-list--ghost ghost">
   {%- for post in site.tags[name] -%}
-    <article class="post-item" id="results-container">
-      <span class="post-item-date">{{ post.date | date: "%b %d, %Y" }}</span>
-      <h3 class="post-item-title">
-        <a href="{{ post.url }}">{{ post.title | escape }}</a>
-      </h3> 
-    </article>
+  <li class="post-list-item">
+    <a class="post-list-link" href="{{ post.url }}">
+      <span class="post-list-title">{{ post.title | escape }}</span>
+      <time class="post-list-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
+    </a>
+  </li>
   {%- endfor -%}
+</ul>
 {%- endfor -%}
+{%- endif -%}

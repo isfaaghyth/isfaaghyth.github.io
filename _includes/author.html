@@ -1,5 +1,7 @@
-<div class="author">
-  <img class="author-avatar" src="{{ site.author.avatar }}" alt="{{ site.author.username }}" />
-  <h1 class="author-name">{{ site.author.name }}</h1>
-  <p class="author-bio">{{ site.author.bio }}</p>
-</div>
+{%- assign profile = site.data.profile -%}
+<section class="hero" aria-label="About the author">
+  <img class="hero-avatar" src="{{ profile.avatar | relative_url }}" alt="{{ profile.name }}" width="88" height="88" />
+  <h1 class="hero-name">{{ profile.hero_title | default: profile.name }} {{ profile.greeting }}</h1>
+  {%- if profile.tagline -%}<p class="hero-eyebrow">{{ profile.tagline }}</p>{%- endif -%}
+  {%- if include.intro and include.intro != "" -%}<p class="hero-intro">{{ include.intro }}</p>{%- endif -%}
+</section>

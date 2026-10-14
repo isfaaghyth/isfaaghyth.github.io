@@ -1,47 +1,9 @@
 ---
-layout: compress
+layout: default
 ---
-
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: " en " }}">
-
-{% include header.html %}
-
-<body data-theme="{{ site.mode }}" class="notransition">
-
-  <script>
-    const body = document.body;
-    const data = body.getAttribute("data-theme");
-
-    const initTheme = (state) => {
-      if (state === "dark") {
-        body.setAttribute("data-theme", "dark");
-      } else if (state === "light") {
-        body.removeAttribute("data-theme");
-      } else {
-        localStorage.setItem("theme", data);
-      }
-    };
-
-    initTheme(localStorage.getItem("theme"));
-
-    setTimeout(() => body.classList.remove("notransition"), 75);
-  </script>
-
-  {% include navbar.html %}
-  <div class="wrapper">
-    <main aria-label="Content">
-      <div class="not-found">
-        <div class="container">
-          <div class="title">404</div>
-          <p class="phrase">Sepertinya anda tersesat. 😕</p>
-          <a class="solution" href="{{ site.url }}">kembali</a>
-        </div>
-      </div>
-    </main>
-    {% include footer.html %}
-  </div>
-
-</body>
-
-</html>
+<section class="not-found">
+  <p class="not-found-code">404</p>
+  <h1 class="not-found-title">Looks like you're lost. 😕</h1>
+  <p>The page you're looking for doesn't exist or has moved.</p>
+  <a class="button" href="/">Back to home</a>
+</section>

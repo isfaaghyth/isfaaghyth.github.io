@@ -1,0 +1,30 @@
+name: Muh Isfhani Ghiath
+hero_title: I'm Isfa
+greeting: "👋🏼"
+brand_emoji: "🪴"
+username: isfhaani
+tagline: Android Google Experts · Mobile Architect
+avatar: /assets/img/isfa.jpg
+bio: ""
+bio_links:
+  - prefix: Find my repositories at
+    icon: github
+    handle: "@isfaaghyth"
+    url: https://github.com/isfaaghyth
+  - prefix: and say hi on
+    icon: x
+    handle: "@isfhaani"
+    url: https://x.com/isfhaani
+socials:
+  - label: GitHub
+    url: https://github.com/isfaaghyth
+    icon: github
+  - label: X
+    url: https://x.com/isfhaani
+    icon: x
+  - label: Email
+    url: mailto:isfa@ghiath.id
+    icon: email
+  - label: RSS
+    url: /feed.xml
+    icon: rss

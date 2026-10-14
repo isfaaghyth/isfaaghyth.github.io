@@ -1,0 +1,14 @@
+{%- assign profile = site.data.profile -%}
+{%- if profile.socials -%}
+<ul class="socials" aria-label="Social links">
+  {%- for s in profile.socials -%}
+  {%- assign ext = true -%}
+  {%- if s.url contains "mailto:" or s.url.first == "/" -%}{%- assign ext = false -%}{%- endif -%}
+  <li>
+    <a class="social-link" href="{{ s.url }}" {% if ext %}target="_blank" rel="noopener me"{% endif %} aria-label="{{ s.label }}" title="{{ s.label }}">
+      {% include icon.html name=s.icon image=s.image label=s.label %}
+    </a>
+  </li>
+  {%- endfor -%}
+</ul>
+{%- endif -%}

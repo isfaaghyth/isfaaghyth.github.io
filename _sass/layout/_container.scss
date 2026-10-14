@@ -1,0 +1,11 @@
+.container {
+  width: 100%;
+  max-width: calc(var(--container) + var(--gutter) * 2);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+main.container {
+  padding-top: var(--space-7);
+  padding-bottom: var(--space-8);
+}

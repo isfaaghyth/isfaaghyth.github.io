@@ -9,15 +9,11 @@ mode: dark # default theme "dark" | "light"
 google_analytics: G-XP2EHVCFFT
 
 # Profile settings
+# Profile content (name, bio, avatar, social links) lives in _data/profile.yml
+# and is edited through TinaCMS. `author` is kept only for jekyll-feed metadata.
 author:
-  name: Muh Isfhani Ghiath 👋🏼 # author name
-  bio: >- # tell to the world
-    Full-stack engineer dengan pengalaman 10+ tahun. Sekarang lagi passionate sama multiplatform mobile app - mulai dari KMP, Lynx, Compose, sampai eksplorasi app performance dan test. Temukan repositori saya di <a href="https://github.com/isfaaghyth" target="_blank" rel="noopener">@isfaaghyth</a>.
-  username: isfaaghyth # general username
-  github: isfaaghyth # github username
-  twitter: isfaaghyth # twitter username
-  email: isfaaghyth[at]gmail[dot]com # email adress
-  avatar: assets/img/me.jpg
+  name: Muh Isfhani Ghiath
+  email: isfa@ghiath.id
 
 # URL settings
 url: "https://isfa.dev/" #
@@ -83,6 +79,10 @@ exclude:
   - klise-*.gem
   - klise.gemspec
   - tina/__generated__
+  - tina
+  - openspec
+  - package.json
+  - package-lock.json
 
 # Plugins
 plugins:

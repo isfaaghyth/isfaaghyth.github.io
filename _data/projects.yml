@@ -1,0 +1,11 @@
+items:
+- title: dailyfriend.ai
+  platforms:
+  - Android
+  - iOS
+  url: https://dailyfriend.ai/
+  icon: /assets/img/logos/dailyfriend.jpg
+- title: kepul.id
+  platforms:
+  - Web
+  url: https://kepul.id/

@@ -2,60 +2,86 @@
 layout: default
 home: true
 ---
+{%- assign home = site.data.home -%}
+{% include author.html intro=home.intro %}
 
 {%- if site.posts.size > 0 -%}
-<h2 class="posts-item-note" aria-label="Recent Posts">Latest Posts</h2>
-  {%- for post in site.posts limit: 3 -%}
-  <article class="post-item">
-    <span class="post-item-date">{{ post.date | date: "%b %d, %Y" }}</span>
-    <h4 class="post-item-title">
-      <a href="{{ post.url }}">{{ post.emoticon | default: "" }} {{ post.title | escape }}</a>
-    </h4>
-  </article>
-  {%- endfor -%}
-  <br>
-{%- else -%}
-  <!-- No posts yet — section hidden -->
+<section class="section" aria-labelledby="latest-posts">
+  <div class="section-head">
+    <h2 id="latest-posts" class="section-title">Latest posts</h2>
+    <a class="section-more" href="/blog/">All posts →</a>
+  </div>
+  <ul class="post-list post-list--ghost ghost">
+    {%- for post in site.posts limit: 3 -%}
+    <li class="post-list-item">
+      <a class="post-list-link" href="{{ post.url }}">
+        <span class="post-list-title">{% if post.emoticon %}<span class="emoticon">{{ post.emoticon }}</span>{% endif %}{{ post.title | escape }}</span>
+        <time class="post-list-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
+      </a>
+    </li>
+    {%- endfor -%}
+  </ul>
+</section>
 {%- endif -%}
 
-<h2 class="posts-item-note" aria-label="Recent Posts">News</h2>
-{%- for pers in site.data.pers -%}
-<div class="card-item">
-  <article class="post-item">
-    <h4 class="post-item-title">
-      <a href="{{ pers.url }}" target="_blank" rel="noopener">{{ pers.title }}</a>
-      <span class="post-item-subtitle">{{ pers.subtitle }}</span>
-    </h4>
-  </article>
-</div>
+{%- if home.experience_summary -%}
+{%- assign summary = home.experience_summary | escape -%}
+{%- for org in home.experience -%}
+  {%- capture token -%}[[{{ org.organization }}]]{%- endcapture -%}
+  {%- capture logo -%}
+    {%- if org.logo -%}<img class="org-logo" src="{{ org.logo }}" alt="" width="18" height="18" loading="lazy" />
+    {%- else -%}<span class="org-logo org-logo--mono" aria-hidden="true">{{ org.organization | slice: 0 | upcase }}</span>{%- endif -%}
+  {%- endcapture -%}
+  {%- if org.url -%}
+    {%- capture chip -%}<a class="org" href="{{ org.url }}" target="_blank" rel="noopener">{{ logo }}{{ org.organization }}</a>{%- endcapture -%}
+  {%- else -%}
+    {%- capture chip -%}<span class="org">{{ logo }}{{ org.organization }}</span>{%- endcapture -%}
+  {%- endif -%}
+  {%- assign summary = summary | replace: token, chip -%}
 {%- endfor -%}
-
-<br>
-
-<h2 class="posts-item-note" aria-label="Recent Posts">Slides</h2>
-{%- for link in site.data.links -%}
-{%- if link.thumbnail -%}
-<div class="card-item card-item--with-thumbnail">
-  <a href="{{ link.url }}" target="_blank" rel="noopener" class="card-item-link">
-    <div class="card-item-thumbnail">
-      <img src="{{ link.thumbnail }}" alt="{{ link.title }}" loading="lazy" />
-    </div>
-    <div class="card-item-content">
-      <h4 class="post-item-title">{{ link.title }}</h4>
-      {% if link.event %}<span class="post-item-subtitle">{{ link.event }}</span>{% endif %}
-    </div>
-  </a>
-</div>
-{%- else -%}
-<div class="card-item">
-  <article class="post-item">
-    <h4 class="post-item-title">
-      <a href="{{ link.url }}" target="_blank" rel="noopener">{% if link.icon %}<img src="{{ link.icon }}" class="post-icon" /> {% endif %}{{ link.title }}</a>
-      {% if link.event %}<span class="post-item-subtitle">{{ link.event }}</span>{% endif %}
-    </h4>
-  </article>
-</div>
+<section class="section" aria-labelledby="experience">
+  <div class="section-head"><h2 id="experience" class="section-title">{{ home.experience_title | default: "Experience" }}</h2></div>
+  {%- assign profile = site.data.profile -%}
+  <div class="ghost experience">
+    {%- if profile.bio and profile.bio != "" -%}<p class="experience-summary">{{ profile.bio }}</p>{%- endif -%}
+    <p class="experience-summary">{{ summary }}</p>
+    {%- if profile.bio_links and profile.bio_links.size > 0 -%}
+    <p class="experience-summary">
+      {%- for l in profile.bio_links %}
+      {{ l.prefix }} <a class="org" href="{{ l.url }}" target="_blank" rel="noopener me">{% include icon.html name=l.icon px=16 %}{{ l.handle }}</a>{% if forloop.last %}.{% endif %}
+      {%- endfor %}
+    </p>
+    {%- endif -%}
+    {%- if home.experience_link_url -%}
+    <a class="ghost-link" href="{{ home.experience_link_url }}" target="_blank" rel="noopener me">{% include icon.html name="linkedin" px=15 %}{{ home.experience_link_label | default: "More on LinkedIn" }} →</a>
+    {%- endif -%}
+  </div>
+</section>
 {%- endif -%}
-{%- endfor -%}
 
-<br>
+{%- if home.news and home.news.size > 0 -%}
+<section class="section" aria-labelledby="news">
+  <div class="section-head"><h2 id="news" class="section-title">{{ home.news_title | default: "News" }}</h2></div>
+  <ul class="link-list">
+    {%- for item in home.news -%}
+    <li>
+      <a class="link-card" href="{{ item.url }}" target="_blank" rel="noopener">
+        <span class="link-card-title">{{ item.title }}</span>
+        {%- if item.subtitle -%}<span class="link-card-meta">{{ item.subtitle }}</span>{%- endif -%}
+      </a>
+    </li>
+    {%- endfor -%}
+  </ul>
+</section>
+{%- endif -%}
+
+{%- if home.slides and home.slides.size > 0 -%}
+<section class="section" aria-labelledby="slides">
+  <div class="section-head"><h2 id="slides" class="section-title">{{ home.slides_title | default: "Slides" }}</h2></div>
+  <ul class="slide-grid">
+    {%- for link in home.slides -%}
+    <li>{% include card.html item=link title=link.title meta=link.event %}</li>
+    {%- endfor -%}
+  </ul>
+</section>
+{%- endif -%}

@@ -1,0 +1,36 @@
+// Editorial pairing: serif headings, sans body, mono labels & code.
+// One size per role — reuse these, never ad-hoc values.
+:root {
+  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --text-label: 0.75rem;   // 12px — mono labels, dates, nav
+  --text-sm: 0.875rem;     // 14px — secondary text, code blocks
+  --text-base: 1rem;       // 16px — UI text, card summaries
+  --text-body: 1.0625rem;  // 17px — long-form body
+  --text-item: 1.1875rem;  // 19px — list/card item titles, lede, h3
+  --text-h2: 1.5rem;       // 24px — prose h2
+  --text-title: 1.875rem; // 30px — page, post and hero titles
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  --leading-tight: 1.22;   // serif headings
+  --leading-snug: 1.45;
+  --leading-body: 1.7;
+
+  --tracking-serif: -0.005em;
+  --tracking-title: -0.012em;
+  --tracking-body: -0.006em;
+  --tracking-label: 0.14em;
+  --measure: 68ch;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --text-title: 2rem; // 32px
+  }
+}

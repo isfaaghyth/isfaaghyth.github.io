@@ -6,3 +6,4 @@ tina/__generated__/
 .tina/
 .env
 .env.local
+.cache/

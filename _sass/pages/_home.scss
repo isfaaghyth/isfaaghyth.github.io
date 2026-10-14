@@ -1,0 +1,105 @@
+// Stacked hero: avatar, name, tagline, intro, bio, socials
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.hero-avatar {
+  width: 88px;
+  height: 88px;
+  margin-bottom: var(--space-2);
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  border: 1px solid var(--color-border);
+}
+
+.hero-name {
+  font-size: var(--text-title);
+  letter-spacing: var(--tracking-title);
+}
+
+.hero-eyebrow {
+  @extend %label;
+  margin-top: calc(var(--space-2) * -1);
+}
+
+.hero-intro {
+  max-width: var(--measure);
+  color: var(--color-heading);
+  font-family: var(--font-serif);
+  font-size: var(--text-item);
+  font-style: italic;
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-serif);
+}
+
+.hero-bio {
+  max-width: var(--measure);
+  color: var(--color-text-muted);
+  font-size: var(--text-body);
+
+  a {
+    font-weight: var(--weight-medium);
+  }
+}
+
+.inline-handle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  font-weight: var(--weight-medium);
+  white-space: nowrap;
+
+  .icon {
+    position: relative;
+    top: -0.05em;
+  }
+}
+
+.hero .socials {
+  margin-left: calc(var(--space-2) * -1);
+}
+
+// Experience — one paragraph with inline company chips
+.experience .experience-summary + .experience-summary {
+  margin-top: var(--space-4);
+}
+
+.experience-summary {
+  color: var(--color-text);
+  font-size: var(--text-body);
+  line-height: 1.85;
+}
+
+.org {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  color: var(--color-heading);
+  font-weight: var(--weight-medium);
+  white-space: nowrap;
+}
+
+a.org:hover {
+  color: var(--color-accent);
+}
+
+.org-logo {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  object-fit: contain;
+  background: var(--color-surface);
+}
+
+.org-logo--mono {
+  display: inline-grid;
+  place-items: center;
+  background: var(--color-ink);
+  color: var(--color-on-ink);
+  font-family: var(--font-mono);
+  font-size: 0.6875em;
+  font-weight: var(--weight-bold);
+}

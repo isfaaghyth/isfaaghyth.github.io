@@ -2,19 +2,10 @@
 title: Muh Isfhani Ghiath
 permalink: /about/
 layout: page
-excerpt: Welcome to withisfa, a micro-journal about Android programming and Backend engineering.
+excerpt: Android Google Experts  ·  Mobile Architect
 comments: false
+show_socials: true
 ---
-
-<div class="social-links-text">
-  {% if site.author.github %}
-  <a href="https://github.com/{{ site.author.github }}" rel="noopener noreferrer">GitHub</a>
-  {% endif %}
-  {% if site.author.github and site.author.twitter %} / {% endif %}
-  {% if site.author.twitter %}
-  <a href="https://twitter.com/{{ site.author.twitter }}" rel="noopener noreferrer">Twitter</a>
-  {% endif %}
-</div>
 
 Hey there! 👋🏼
 
@@ -29,8 +20,8 @@ Previously, I co-led [GDG Jakarta](https://gdg.community.dev/gdg-jakarta) — a 
 I graduated summa cum-laude (3.99 GPA) in 2019 from [STT Terpadu Nurul Fikri](https://nurulfikri.ac.id/) with a major in Informatics Engineering. During college, I was a [DSC Lead](https://developers.googleblog.com/id/calling-all-students-learn-how-to-become-a-google-developer-student-club-lead/) for 2 years, and thanks to that contribution, I got the chance to attend [Google I/O](https://io.google/) in Mountain View, California.
 
 **Gear**
-- M1 MacBook Pro 2021, Lenovo X1 Carbon
-- LG LED 25" IPS 25UM58
+- MacBook Pro M4 Pro, 24GB, 512GB
+- LG LED 25” IPS 25UM58
 
 
 **Misc**
@@ -48,4 +39,4 @@ or via:
 $ keybase id isfaaghyth
 ```
 
-Thanks for stopping by! 🌴
+Tabe'! 🌴

@@ -1,0 +1,17 @@
+---
+title: Projects
+permalink: /projects/
+layout: page
+excerpt: Things I build on the side — apps, tools, and experiments.
+---
+{%- assign projects = site.data.projects -%}
+{%- if projects.items and projects.items.size > 0 -%}
+<ul class="slide-grid">
+  {%- for p in projects.items -%}
+  {%- assign meta = p.platforms | join: " / " -%}
+  <li>{% include card.html item=p title=p.title meta=meta %}</li>
+  {%- endfor -%}
+</ul>
+{%- else -%}
+<p class="empty-state">No projects yet.</p>
+{%- endif -%}
