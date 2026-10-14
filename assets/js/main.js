@@ -77,6 +77,24 @@
     setActive();
   }
 
+  // "Load more" for long card grids (e.g. home slides). Without JS everything shows.
+  document.querySelectorAll(".load-more[data-target]").forEach((button) => {
+    const grid = document.getElementById(button.dataset.target);
+    if (!grid) return;
+    const limit = Number(grid.dataset.collapse) || 3;
+    const extra = [...grid.children].slice(limit);
+    const setOpen = (open) => {
+      extra.forEach((item) => (item.hidden = !open));
+      button.textContent = open ? "Show less" : "Load more";
+      button.setAttribute("aria-expanded", String(open));
+    };
+    button.addEventListener("click", () =>
+      setOpen(button.getAttribute("aria-expanded") !== "true")
+    );
+    setOpen(false);
+    button.hidden = false;
+  });
+
   // Back to top button
   const backToTop = document.getElementById("back-to-top");
   if (backToTop) {

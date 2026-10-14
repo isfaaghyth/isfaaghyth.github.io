@@ -382,3 +382,26 @@ div.ghost {
     margin: 0;
   }
 }
+
+.load-more {
+  @extend %label;
+  display: block;
+  margin: var(--space-4) auto 0;
+  padding: var(--space-2) var(--space-5);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: color var(--transition), border-color var(--transition);
+
+  &:hover {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+}
+
+.load-more[hidden],
+.slide-grid > li[hidden] {
+  display: none;
+}

@@ -59,6 +59,20 @@ home: true
 </section>
 {%- endif -%}
 
+{%- if home.slides and home.slides.size > 0 -%}
+<section class="section" aria-labelledby="slides">
+  <div class="section-head"><h2 id="slides" class="section-title">{{ home.slides_title | default: "Slides" }}</h2></div>
+  <ul class="slide-grid" id="slides-grid" data-collapse="3">
+    {%- for link in home.slides -%}
+    <li>{% include card.html item=link title=link.title meta=link.event %}</li>
+    {%- endfor -%}
+  </ul>
+  {%- if home.slides.size > 3 -%}
+  <button type="button" class="load-more" data-target="slides-grid" aria-expanded="false" hidden>Load more</button>
+  {%- endif -%}
+</section>
+{%- endif -%}
+
 {%- if home.news and home.news.size > 0 -%}
 <section class="section" aria-labelledby="news">
   <div class="section-head"><h2 id="news" class="section-title">{{ home.news_title | default: "News" }}</h2></div>
@@ -75,13 +89,3 @@ home: true
 </section>
 {%- endif -%}
 
-{%- if home.slides and home.slides.size > 0 -%}
-<section class="section" aria-labelledby="slides">
-  <div class="section-head"><h2 id="slides" class="section-title">{{ home.slides_title | default: "Slides" }}</h2></div>
-  <ul class="slide-grid">
-    {%- for link in home.slides -%}
-    <li>{% include card.html item=link title=link.title meta=link.event %}</li>
-    {%- endfor -%}
-  </ul>
-</section>
-{%- endif -%}
