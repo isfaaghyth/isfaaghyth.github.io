@@ -41,6 +41,9 @@ defaults:
     values:
       layout: post
       comments: false
+      # Posts are written in the CMS and often contain code like `{%s}`;
+      # don't treat their content as Liquid templates.
+      render_with_liquid: false
 
 # Jekyll Compose default front matter
 jekyll_compose:
