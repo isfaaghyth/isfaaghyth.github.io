@@ -1,1 +1,7 @@
-{}
+items:
+  - title: 'WulingX: Unofficial wuling app'
+    platforms:
+      - Android
+      - iOS
+    url: 'https://wuling.ghiath.id/'
+    thumbnail: /assets/images/uploads/1 copy.png
